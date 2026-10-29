@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tá na Lista | Diário de bordo | Geise Moreira</title>
+  <meta name="description" content="Diário de bordo do Tá na Lista, um app que aprende com as suas compras do mês e sugere a próxima lista.">
+  <!-- prévia quando o link é compartilhado (WhatsApp, LinkedIn...): endereço do site no Cloudflare.
+       Se o site mudar de endereço (ex.: domínio próprio), troque "https://cadernodedesign.designday.workers.dev" aqui. -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Tá na Lista | Diário de bordo | Geise Moreira">
+  <meta property="og:description" content="Diário de bordo do Tá na Lista, um app que aprende com as suas compras do mês e sugere a próxima lista.">
+  <meta property="og:image" content="https://cadernodedesign.designday.workers.dev/imagens/compartilhar.jpg">
+  <meta property="og:url" content="https://cadernodedesign.designday.workers.dev/diario-ta-na-lista.html">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fontes (Google Fonts, uso comercial liberado):
+       Atkinson Hyperlegible Next = textos | Caveat = anotações à mão -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;500;600&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Favicon: a borboleta (dois "g" espelhados) -->
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <link rel="stylesheet" href="design.css">
+</head>
+<body>
+
+  <!-- Atalho para quem navega pelo teclado (aparece ao apertar Tab) -->
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- ================= NAVEGAÇÃO ================= -->
+  <header class="topo">
+    <div class="container topo__linha">
+      <a class="marca" href="index.html">
+        <img class="marca__icone" src="imagens/marca-borboleta.svg" width="24" height="24" alt="">
+        Geise Moreira
+        <span class="anotacao anotacao--sem-seta marca__nota">caderno de design</span>
+      </a>
+
+      <nav aria-label="Principal" id="menu-principal">
+        <ul class="menu">
+          <li><a href="index.html#projetos">Projetos</a></li>
+          <li><a href="projetos-faculdade.html">Faculdade</a></li>
+          <li><a href="index.html#sobre">Sobre</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <a class="botao botao--secundario botao--pulso" href="https://wa.link/a5lmdj" target="_blank" rel="noopener">Vamos conversar</a>
+
+      <!-- botão do menu no celular (☰) -->
+      <button class="menu-botao" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- ================= DIÁRIO DE BORDO: TÁ NA LISTA =================
+         Para registrar um passo novo: copie um <li class="diario__passo"> inteiro,
+         troque o texto e a etiqueta (feito / agora / próximo). Se quiser, coloque a data no <time>. -->
+    <article class="estudo">
+
+      <header class="secao estudo__topo">
+        <div class="container">
+          <a class="academico__voltar" href="index.html#projetos">← voltar aos projetos</a>
+          <h1 class="estudo__titulo">Tá na Lista: <span class="marca-texto">diário de bordo.</span></h1>
+          <p class="secao__resumo">Um app que aprende com as suas compras do mês e sugere a lista do mês seguinte: o que você mais consome e onde está mais barato. Aqui eu registro cada passo, inclusive o que ainda não sei.</p>
+        </div>
+      </header>
+
+      <section class="secao diario-pagina">
+        <div class="container">
+          <ol class="diario__linha">
+
+            <li class="diario__passo diario__passo--feito">
+              <img class="diario__icone" data-src="imagens/check-feito-anima.svg" width="32" height="32" alt="">
+              <p class="diario__etiqueta">feito</p>
+              <h2>O problema</h2>
+              <p>Defini o que o app precisa resolver: sugerir a lista do próximo mês com base no que a pessoa já compra, mostrando onde cada coisa está mais barata.</p>
+            </li>
+
+            <li class="diario__passo diario__passo--feito">
+              <img class="diario__icone" data-src="imagens/check-feito-anima.svg" width="32" height="32" alt="">
+              <p class="diario__etiqueta">feito</p>
+              <h2>Os primeiros esboços das telas</h2>
+              <p>Abertura, login, criar conta e a tela de estatísticas, com a média do mês e as últimas compras em cada mercado.</p>
+              <img class="diario__telas" src="imagens/ta-na-lista-telas-hd.webp" width="698" height="397" loading="lazy"
+                   alt="Quatro telas do app Tá na Lista: abertura com o logo, login, criar conta e estatísticas com a média mensal de R$ 2.595,21 e a lista das últimas compras.">
+            </li>
+
+            <li class="diario__passo diario__passo--agora">
+              <p class="diario__etiqueta">agora</p>
+              <h2>Conversar com 5 pessoas que fazem as compras da casa</h2>
+              <div class="pergunta">
+                <p class="pergunta__rotulo">A pergunta que estou investigando</p>
+                <p class="pergunta__texto">Como os dados das compras entram no app sem dar trabalho?</p>
+              </div>
+              <p class="anotacao">o que eu descobrir entra aqui</p>
+            </li>
+
+            <li class="diario__passo">
+              <p class="diario__etiqueta">próximo</p>
+              <h2>Testar o fluxo com usuários</h2>
+              <p>Colocar as telas na mão de quem faz as compras e ver onde a pessoa trava.</p>
+            </li>
+
+          </ol>
+
+          <div class="diario__convite">
+            <div>
+              <h2>Você faz as compras da casa?</h2>
+              <p class="secao__resumo">Eu queria muito ouvir como você faz a sua lista. Sua resposta entra neste diário.</p>
+            </div>
+            <a class="botao botao--pulso" href="pesquisa-ta-na-lista.html">Quero ajudar</a>
+          </div>
+
+          <div class="diario__voltar">
+            <a class="botao" href="index.html#projetos">Voltar aos projetos</a>
+          </div>
+        </div>
+      </section>
+
+    </article>
+
+  </main>
+
+  <!-- ================= CONTATO (rodapé em duas faixas) ================= -->
+  <footer id="contato" class="contato">
+    <div class="container contato__chamada">
+      <p class="anotacao">vamos conversar?</p>
+      <h2>Quer falar sobre um projeto, um estágio ou só tomar um café?</h2>
+      <a class="botao contato__botao" href="https://wa.link/a5lmdj" target="_blank" rel="noopener">Me chama no WhatsApp</a>
+    </div>
+
+    <div class="contato__base">
+      <div class="container contato__colunas">
+        <span class="contato__selo" aria-hidden="true"><img src="imagens/marca-borboleta.svg" width="28" height="28" alt=""></span>
+        <div>
+          <p class="contato__titulo">Fale comigo</p>
+          <ul>
+            <li><a href="https://wa.link/a5lmdj" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><a class="contato__email-curto" href="mailto:geisedossantoscabral@gmail.com?subject=Contato%20pelo%20portf%C3%B3lio">E-mail</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="contato__titulo">Redes</p>
+          <ul>
+            <li><a href="https://www.linkedin.com/in/geisemoreira/" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://www.instagram.com/geisemoreiradesigner/" target="_blank" rel="noopener">Instagram</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="contato__titulo">Onde estou</p>
+          <ul>
+            <li>São Miguel do Oeste · SC</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script>
+        // No computador, o clique abre um e-mail novo no Gmail (numa aba nova), já com o endereço e o assunto.
+        // No celular, continua o mailto, que abre o app de e-mail da pessoa.
+        (function () {
+          var link = document.querySelector('.contato__email-curto');
+          if (!link || /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent)) return;
+          link.href = 'https://mail.google.com/mail/?view=cm&fs=1&to=geisedossantoscabral@gmail.com&su=' + encodeURIComponent('Contato pelo portfólio');
+          link.target = '_blank'; link.rel = 'noopener';
+        })();
+        // A pergunta do rodapé aparece palavra por palavra (subindo e saindo do desfoque) quando chega na tela.
+        // A última palavra, "café?", ganha o rosa neon.
+        (function () {
+          var titulo = document.querySelector('.contato h2');
+          if (!titulo || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+          var palavras = titulo.textContent.trim().split(/\s+/);
+          titulo.setAttribute('aria-label', titulo.textContent.trim());
+          titulo.innerHTML = palavras.map(function (p, i) {
+            var destaque = i === palavras.length - 1 ? ' palavra--destaque' : '';
+            return '<span class="palavra' + destaque + '" aria-hidden="true" style="--i:' + i + '">' + p + '</span>';
+          }).join(' ');
+          titulo.classList.add('titulo-animado');
+          if (!('IntersectionObserver' in window)) { titulo.classList.add('titulo-animado--visivel'); return; }
+          new IntersectionObserver(function (e, olho) {
+            if (e[0].isIntersecting) { titulo.classList.add('titulo-animado--visivel'); olho.disconnect(); }
+          }, { threshold: 0.6 }).observe(titulo);
+        })();
+      </script>
+  </footer>
+
+  <script src="diario.js" defer></script>
+  <script>
+    // Menu do celular: o botão ☰ abre e fecha a lista de links
+    (function () {
+      var topo = document.querySelector('.topo'), botao = document.querySelector('.menu-botao');
+      if (!botao) return;
+      function fechar() { topo.classList.remove('topo--aberto'); botao.setAttribute('aria-expanded', 'false'); botao.setAttribute('aria-label', 'Abrir menu'); }
+      botao.addEventListener('click', function () {
+        var abrir = !topo.classList.contains('topo--aberto');
+        topo.classList.toggle('topo--aberto', abrir);
+        botao.setAttribute('aria-expanded', String(abrir));
+        botao.setAttribute('aria-label', abrir ? 'Fechar menu' : 'Abrir menu');
+      });
+      topo.querySelectorAll('.menu a').forEach(function (a) { a.addEventListener('click', fechar); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') fechar(); });
+    })();
+  </script>
+</body>
+</html>

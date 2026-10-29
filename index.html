@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geise Moreira | Caderno de design</title>
+  <meta name="description" content="Portfólio de Geise Moreira, estudante de Design na Unoesc. Antes da tela, eu entendo o problema.">
+  <!-- prévia quando o link é compartilhado (WhatsApp, LinkedIn...): endereço do site no Cloudflare.
+       Se o site mudar de endereço (ex.: domínio próprio), troque "https://cadernodedesign.designday.workers.dev" aqui. -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Geise Moreira | Caderno de design">
+  <meta property="og:description" content="Portfólio de Geise Moreira, estudante de Design na Unoesc. Antes da tela, eu entendo o problema.">
+  <meta property="og:image" content="https://cadernodedesign.designday.workers.dev/imagens/compartilhar.jpg">
+  <meta property="og:url" content="https://cadernodedesign.designday.workers.dev/">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fontes (Google Fonts, uso comercial liberado):
+       Atkinson Hyperlegible Next = textos | Caveat = anotações à mão -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;500;600&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Favicon: a borboleta (dois "g" espelhados) -->
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <link rel="stylesheet" href="design.css">
+</head>
+<body>
+
+  <!-- Atalho para quem navega pelo teclado (aparece ao apertar Tab) -->
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- ================= NAVEGAÇÃO ================= -->
+  <header class="topo">
+    <div class="container topo__linha">
+      <a class="marca" href="#inicio">
+        <img class="marca__icone" src="imagens/marca-borboleta.svg" width="24" height="24" alt="">
+        Geise Moreira
+        <span class="anotacao anotacao--sem-seta marca__nota">caderno de design</span>
+      </a>
+
+      <nav aria-label="Principal" id="menu-principal">
+        <ul class="menu">
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#faculdade">Faculdade</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <a class="botao botao--secundario botao--pulso" href="https://wa.link/a5lmdj" target="_blank" rel="noopener">Vamos conversar</a>
+
+      <!-- botão do menu no celular (☰) -->
+      <button class="menu-botao" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- borboleta que voa pelas laterais da página; por onde passa, aparecem bolinhas rosa (borboleta-voo.js) -->
+    <div class="voo" aria-hidden="true">
+      <canvas class="voo__rastro"></canvas>
+      <img class="voo__borboleta" src="imagens/marca-borboleta.svg" width="30" height="30" alt="">
+    </div>
+
+    <!-- ================= ABERTURA ================= -->
+    <section id="inicio" class="abertura">
+      <div class="container abertura__grade">
+
+        <div class="abertura__texto">
+          <h1>
+            Antes da tela, eu
+            <span class="marca-texto">entendo o problema.</span>
+          </h1>
+
+          <p class="abertura__apresentacao">Sou a Geise, estudante da 4ª fase de Design na Unoesc e, há seis meses, atuo na área de design gráfico. Este site é o meu caderno: aqui mostro como penso, o que testo e o que aprendo em cada projeto.</p>
+
+          <div class="acoes">
+            <a class="botao" href="#projetos">Ver meus projetos</a>
+            <a class="botao botao--secundario" href="#sobre">Sobre mim</a>
+          </div>
+
+          <p class="anotacao">psiu: este site eu mesma desenhei</p>
+        </div>
+
+        <div class="abertura__lado">
+          <figure class="abertura__retrato">
+            <img src="imagens/autorretrato.svg" width="440" height="512"
+                 alt="Autorretrato ilustrado: Geise sorrindo, de camiseta rosa e crachá, com corações desenhados ao fundo.">
+            <figcaption class="anotacao abertura__oi">oi! eu sou a Geise</figcaption>
+          </figure>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= PROJETO 01 ================= -->
+    <section id="projetos" class="secao secao--branca">
+      <div class="container">
+
+        <div class="secao__cabecalho">
+          <div>
+            <h2>Fotos sem feed</h2>
+            <p class="secao__resumo">Uma landing page com acesso por código para entregar as fotos do Unoesc Day sem expor alunos menores de idade.</p>
+          </div>
+        </div>
+
+        <article class="caso">
+          <img class="caso__imagem caso__imagem--foto" src="imagens/ladu-mockup.webp" width="1360" height="913" loading="lazy"
+               alt="Mockup da landing page ladu.des.br no computador e em dois celulares, com as seções O que é o curso de Design e O curso em números.">
+
+          <div class="caso__pensamento">
+            <p class="anotacao">como eu pensei</p>
+            <ol class="etapas">
+              <li>
+                <h3>Problema</h3>
+                <p>Muitos alunos no evento eram menores de idade. Publicar as fotos num feed aberto exporia a imagem deles.</p>
+              </li>
+              <li>
+                <h3>Pergunta</h3>
+                <p>Como entregar a foto de cada aluno sem mostrá-la para mais ninguém?</p>
+              </li>
+              <li>
+                <h3>Decisão</h3>
+                <p>Um código individual: cada aluno vê só as próprias fotos, sem precisar se cadastrar.</p>
+              </li>
+            </ol>
+            <a class="botao" href="estudo-de-caso-fotos-sem-feed.html">Ler o estudo de caso</a>
+          </div>
+        </article>
+
+        <dl class="numeros">
+          <div>
+            <dt>sessões de fotografia</dt>
+            <dd>120</dd>
+          </div>
+          <div>
+            <dt>fotos entregues com segurança</dt>
+            <dd>2.970</dd>
+          </div>
+          <div class="numeros__destaque">
+            <dt>fotos expostas publicamente</dt>
+            <dd>0</dd>
+            <p class="anotacao">o número que mais me orgulha</p>
+          </div>
+        </dl>
+
+      </div>
+    </section>
+
+    <!-- ================= PROJETO 02 ================= -->
+    <section class="secao">
+      <div class="container diario">
+
+        <div class="diario__texto">
+          <h2>Tá na Lista</h2>
+          <p class="secao__resumo">Um app que aprende com as suas compras do mês e sugere a lista do mês seguinte: o que você mais consome e onde está mais barato.</p>
+
+          <p class="anotacao">diário de bordo</p>
+          <ul class="checklist">
+            <li class="feito">Problema definido</li>
+            <li class="feito">Primeiros esboços das telas</li>
+            <li>Conversar com 5 pessoas que fazem as compras da casa</li>
+            <li>Testar o fluxo com usuários</li>
+          </ul>
+
+          <div class="pergunta">
+            <p class="pergunta__rotulo">A pergunta que estou investigando agora</p>
+            <p class="pergunta__texto">Como os dados das compras entram no app sem dar trabalho?</p>
+          </div>
+
+          <a class="botao" href="diario-ta-na-lista.html">Acompanhar o diário</a>
+        </div>
+
+        <div class="diario__telas">
+          <img src="imagens/ta-na-lista-telas-hd.webp" width="698" height="397" loading="lazy"
+               alt="Quatro telas do app Tá na Lista no celular: abertura com o logo, login, criar conta e estatísticas com a média mensal de R$ 2.595,21 e a lista das últimas compras.">
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= PROJETOS DA FACULDADE ================= -->
+    <section id="faculdade" class="secao secao--branca secao--vidro">
+      <div class="container">
+        <div class="secao__cabecalho">
+          <div>
+            <p class="rotulo">Projetos da faculdade · Design Unoesc</p>
+            <h2>Na faculdade, eu <span class="marca-texto">experimento.</span></h2>
+            <p class="secao__resumo">Pesquisa, produto e interface: trabalhos de disciplina onde o erro é permitido, e é onde eu mais aprendo.</p>
+          </div>
+        </div>
+        <div class="academico__grade">
+
+          <article class="academico__card">
+            <p class="academico__tipo">Pesquisa · SIEPE Unoesc</p>
+            <h3>A importância do profissional de design na criação de interfaces com IA que preservem a ergonomia cognitiva do usuário</h3>
+            <p>Uma revisão bibliográfica sobre o papel do designer quando a interface pensa junto com a gente: como evitar que a IA sobrecarregue quem usa.</p>
+            <ul class="tags">
+              <li>Revisão bibliográfica</li>
+              <li>IA</li>
+              <li>Ergonomia cognitiva</li>
+            </ul>
+            <p class="academico__autoria">com Valentina Delanoy · orientação do Prof. Eduardo Cipriani Schwengber</p>
+            <a class="academico__link" href="resumo-siepe.html">Ler o resumo</a>
+          </article>
+
+          <article class="academico__card">
+            <p class="academico__tipo">Projeto II · Design de Produto</p>
+            <h3>Guarda-roupa Viena</h3>
+            <p>Um guarda-roupa minimalista para a MX Móveis: portas de correr, espelho e nichos externos, para organizar melhor sem encarecer a produção.</p>
+            <ul class="tags">
+              <li>Método de Löbach</li>
+              <li>Mobiliário</li>
+              <li>Parceria MX Móveis</li>
+            </ul>
+            <p class="academico__autoria">com Valentina Delanoy · orientação do Prof. Willian Matida</p>
+            <a class="academico__link" href="estudo-de-caso-guarda-roupa-viena.html">Ver o estudo de caso</a>
+          </article>
+
+          <article class="academico__card">
+            <p class="academico__tipo">Estética e Percepção · Em grupo</p>
+            <h3>Windows 8: por que a interface estranhou tanta gente</h3>
+            <p>Analisamos proporção, ritmo visual, ergonomia, coerência estética e usabilidade do Windows 8, e redesenhamos a tela inicial, o menu Iniciar e as configurações rápidas.</p>
+            <ul class="tags">
+              <li>Análise de interface</li>
+              <li>Usabilidade</li>
+              <li>Redesign</li>
+            </ul>
+            <p class="academico__autoria">com Mayara Wommer, Valentina Delanoy e mais 3 colegas</p>
+            <a class="academico__link" href="estudo-de-caso-windows-8.html">Ver o estudo de caso</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= DESENHOS ================= -->
+    <section class="secao">
+      <div class="container">
+        <div class="secao__cabecalho desenhos__cabecalho">
+          <h2>Fora das telas, eu desenho.</h2>
+          <p class="secao__resumo">A ilustração é onde eu treino observação e paciência. As duas vão comigo para cada interface.</p>
+        </div>
+
+        <div class="carrossel carrossel--parado" aria-label="Meus desenhos">
+        <ul class="mural">
+          <!-- DESENHOS: para colocar mais um, copie um <li> inteiro e troque a imagem e a nota -->
+          <li>
+            <img class="mural__desenho" src="imagens/desenho-vestido-caderno.webp" width="800" height="1155" loading="lazy"
+                 alt="Desenho a lápis no caderno: moça de vestido ombro a ombro rodado, com detalhes em azul.">
+            <p class="anotacao anotacao--sem-seta mural__nota">o vestido, no caderno</p>
+          </li>
+          <li>
+            <img class="mural__desenho mural__desenho--inteiro" src="imagens/desenho-vestido-vetor.webp" width="800" height="1250" loading="lazy"
+                 alt="O mesmo vestido vetorizado: vestido verde com faixas douradas, fundo rosa claro.">
+            <p class="anotacao anotacao--sem-seta mural__nota">o vestido, vetorizado</p>
+          </li>
+          <li>
+            <img class="mural__desenho" src="imagens/ilustracao-gatos-terra.webp" width="900" height="1600" loading="lazy"
+                 alt="Ilustração vetorial: dois gatos pretos sentados num muro de madeira, de costas, olhando a Terra no céu estrelado, com um coração entre eles e uma estrela cadente.">
+            <p class="anotacao anotacao--sem-seta mural__nota">ilustração digital</p>
+          </li>
+        </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= SOBRE ================= -->
+    <section id="sobre" class="secao secao--branca">
+      <div class="container sobre">
+        <figure class="sobre__foto">
+          <img src="imagens/geise-unoesc-day.webp" width="760" height="920" loading="lazy"
+               alt="Foto de Geise sorrindo no Unoesc Day, de camiseta rosa e crachá.">
+          <figcaption class="anotacao sobre__nota">essa sou eu</figcaption>
+        </figure>
+
+        <div class="sobre__texto">
+          <p class="rotulo">Sobre mim</p>
+          <h2>Do administrativo para o criativo.</h2>
+          <p class="secao__resumo">Minha carreira sempre foi no administrativo, mas algo sempre me puxava para o criativo. Há seis meses, resolvi ouvir.</p>
+
+          <ol class="trajetoria" aria-label="Minha trajetória">
+            <li><span>Administrativo</span></li>
+            <li><span>Graduação em Design</span></li>
+            <li><span>Unoesc Day</span></li>
+            <li aria-current="step"><span>UX/UI</span></li>
+          </ol>
+
+          <p class="anotacao">o resto da história eu te conto num café</p>
+          <a class="botao botao--pulso" href="https://wa.link/a5lmdj" target="_blank" rel="noopener">Vamos conversar</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= CONTATO (rodapé em duas faixas) ================= -->
+  <footer id="contato" class="contato">
+    <div class="container contato__chamada">
+      <p class="anotacao">vamos conversar?</p>
+      <h2>Quer falar sobre um projeto, um estágio ou só tomar um café?</h2>
+      <a class="botao contato__botao" href="https://wa.link/a5lmdj" target="_blank" rel="noopener">Me chama no WhatsApp</a>
+    </div>
+
+    <div class="contato__base">
+      <div class="container contato__colunas">
+        <span class="contato__selo" aria-hidden="true"><img src="imagens/marca-borboleta.svg" width="28" height="28" alt=""></span>
+        <div>
+          <p class="contato__titulo">Fale comigo</p>
+          <ul>
+            <li><a href="https://wa.link/a5lmdj" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><a class="contato__email-curto" href="mailto:geisedossantoscabral@gmail.com?subject=Contato%20pelo%20portf%C3%B3lio">E-mail</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="contato__titulo">Redes</p>
+          <ul>
+            <li><a href="https://www.linkedin.com/in/geisemoreira/" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://www.instagram.com/geisemoreiradesigner/" target="_blank" rel="noopener">Instagram</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="contato__titulo">Onde estou</p>
+          <ul>
+            <li>São Miguel do Oeste · SC</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script>
+        // No computador, o clique abre um e-mail novo no Gmail (numa aba nova), já com o endereço e o assunto.
+        // No celular, continua o mailto, que abre o app de e-mail da pessoa.
+        (function () {
+          var link = document.querySelector('.contato__email-curto');
+          if (!link || /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent)) return;
+          link.href = 'https://mail.google.com/mail/?view=cm&fs=1&to=geisedossantoscabral@gmail.com&su=' + encodeURIComponent('Contato pelo portfólio');
+          link.target = '_blank'; link.rel = 'noopener';
+        })();
+        // A pergunta do rodapé aparece palavra por palavra (subindo e saindo do desfoque) quando chega na tela.
+        // A última palavra, "café?", ganha o rosa neon.
+        (function () {
+          var titulo = document.querySelector('.contato h2');
+          if (!titulo || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+          var palavras = titulo.textContent.trim().split(/\s+/);
+          titulo.setAttribute('aria-label', titulo.textContent.trim());
+          titulo.innerHTML = palavras.map(function (p, i) {
+            var destaque = i === palavras.length - 1 ? ' palavra--destaque' : '';
+            return '<span class="palavra' + destaque + '" aria-hidden="true" style="--i:' + i + '">' + p + '</span>';
+          }).join(' ');
+          titulo.classList.add('titulo-animado');
+          if (!('IntersectionObserver' in window)) { titulo.classList.add('titulo-animado--visivel'); return; }
+          new IntersectionObserver(function (e, olho) {
+            if (e[0].isIntersecting) { titulo.classList.add('titulo-animado--visivel'); olho.disconnect(); }
+          }, { threshold: 0.6 }).observe(titulo);
+        })();
+      </script>
+  </footer>
+
+  <script>
+    // Menu do celular: o botão ☰ abre e fecha a lista de links
+    (function () {
+      var topo = document.querySelector('.topo'), botao = document.querySelector('.menu-botao');
+      if (!botao) return;
+      function fechar() { topo.classList.remove('topo--aberto'); botao.setAttribute('aria-expanded', 'false'); botao.setAttribute('aria-label', 'Abrir menu'); }
+      botao.addEventListener('click', function () {
+        var abrir = !topo.classList.contains('topo--aberto');
+        topo.classList.toggle('topo--aberto', abrir);
+        botao.setAttribute('aria-expanded', String(abrir));
+        botao.setAttribute('aria-label', abrir ? 'Fechar menu' : 'Abrir menu');
+      });
+      topo.querySelectorAll('.menu a').forEach(function (a) { a.addEventListener('click', fechar); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') fechar(); });
+    })();
+  </script>
+  <script src="borboleta-voo.js" defer></script>
+  <script src="mural-slide.js" defer></script>
+</body>
+</html>

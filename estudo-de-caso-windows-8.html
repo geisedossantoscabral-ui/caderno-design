@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Windows 8 redesenhado | Estética e Percepção | Geise Moreira</title>
+  <meta name="description" content="Análise e redesign do Windows 8: por que a interface estranhou tanta gente e como três telas poderiam ser mais claras.">
+  <!-- prévia quando o link é compartilhado (WhatsApp, LinkedIn...): endereço do site no Cloudflare.
+       Se o site mudar de endereço (ex.: domínio próprio), troque "https://cadernodedesign.designday.workers.dev" aqui. -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Windows 8 redesenhado | Estética e Percepção | Geise Moreira">
+  <meta property="og:description" content="Análise e redesign do Windows 8: por que a interface estranhou tanta gente e como três telas poderiam ser mais claras.">
+  <meta property="og:image" content="https://cadernodedesign.designday.workers.dev/imagens/compartilhar.jpg">
+  <meta property="og:url" content="https://cadernodedesign.designday.workers.dev/estudo-de-caso-windows-8.html">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fontes (Google Fonts, uso comercial liberado):
+       Atkinson Hyperlegible Next = textos | Caveat = anotações à mão -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;500;600&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Favicon: a borboleta (dois "g" espelhados) -->
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <link rel="stylesheet" href="design.css">
+</head>
+<body>
+
+  <!-- Atalho para quem navega pelo teclado (aparece ao apertar Tab) -->
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- ================= NAVEGAÇÃO ================= -->
+  <header class="topo">
+    <div class="container topo__linha">
+      <a class="marca" href="index.html">
+        <img class="marca__icone" src="imagens/marca-borboleta.svg" width="24" height="24" alt="">
+        Geise Moreira
+        <span class="anotacao anotacao--sem-seta marca__nota">caderno de design</span>
+      </a>
+
+      <nav aria-label="Principal" id="menu-principal">
+        <ul class="menu">
+          <li><a href="index.html#projetos">Projetos</a></li>
+          <li><a href="projetos-faculdade.html">Faculdade</a></li>
+          <li><a href="index.html#sobre">Sobre</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <a class="botao botao--secundario botao--pulso" href="https://wa.link/a5lmdj" target="_blank" rel="noopener">Vamos conversar</a>
+
+      <!-- botão do menu no celular (☰) -->
+      <button class="menu-botao" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- ================= ESTUDO DE CASO: FOTOS SEM FEED ================= -->
+    <article class="estudo">
+
+      <!-- borboleta que voa pelas laterais da página e acende as bolinhas por onde passa (borboleta-voo.js) -->
+      <div class="voo" aria-hidden="true">
+        <canvas class="voo__rastro"></canvas>
+        <img class="voo__borboleta" src="imagens/marca-borboleta.svg" width="30" height="30" alt="">
+      </div>
+
+      <header class="secao estudo__topo">
+        <div class="container">
+          <a class="academico__voltar" href="projetos-faculdade.html">← voltar aos projetos da faculdade</a>
+
+          <p class="rotulo">Estética e Percepção · Em grupo</p>
+          <h1 class="estudo__titulo">Windows 8, <span class="marca-texto">redesenhado.</span></h1>
+          <p class="secao__resumo">Analisamos por que a interface do Windows 8 estranhou tanta gente e redesenhamos três telas: a tela inicial, o menu Iniciar e as configurações rápidas.</p>
+
+          <dl class="estudo__ficha">
+            <div><dt>Disciplina</dt><dd>Estética e Percepção, Design Unoesc</dd></div>
+            <div><dt>Equipe</dt><dd>Geise Moreira, Mayara Wommer, Valentina Delanoy e mais 3 colegas</dd></div>
+            <div><dt>Entrega</dt><dd>Análise e protótipo navegável</dd></div>
+          </dl>
+        </div>
+      </header>
+
+      <!-- O PROTÓTIPO E AS TELAS (slider: setas, bolinhas e arrastar no celular)
+           Para colocar mais uma imagem, copie um <li class="telas__slide"> inteiro -->
+      <section class="telas" aria-roledescription="carrossel" aria-label="Vídeo do protótipo e telas do redesign">
+        <div class="container">
+          <div class="telas__janela">
+            <ul class="telas__trilho">
+
+              <li class="telas__slide telas__slide--capa" aria-label="1 de 6">
+                <video class="telas__foto telas__foto--capa" src="imagens/windows8-redesign.mp4" poster="imagens/windows8-redesign-capa.jpg" width="1280" height="646" autoplay muted loop playsinline controls
+                       aria-label="Vídeo do protótipo do redesign: a tela inicial, o menu Iniciar e as configurações rápidas sendo usados."></video>
+                <div class="telas__texto">
+                  <p class="anotacao anotacao--sem-seta">1. o protótipo</p>
+                  <p>O redesign funcionando de verdade: tela inicial, menu Iniciar e configurações rápidas.</p>
+                </div>
+              </li>
+
+              <li class="telas__slide telas__slide--capa" aria-label="2 de 6">
+                <img class="telas__foto telas__foto--capa" src="imagens/win8-start.webp" width="1600" height="900" loading="lazy"
+                     alt="Antes e depois da tela inicial do Windows 8: à esquerda os blocos coloridos com rolagem horizontal, à direita o redesign escuro com saudação, busca e destaques.">
+                <div class="telas__texto">
+                  <p class="anotacao anotacao--sem-seta">2. a tela inicial</p>
+                  <p>Antes, tudo com o mesmo peso. Depois, hierarquia clara, rolagem vertical e busca sempre no topo.</p>
+                </div>
+              </li>
+
+              <li class="telas__slide telas__slide--capa" aria-label="3 de 6">
+                <img class="telas__foto telas__foto--capa" src="imagens/win8-menu.webp" width="1600" height="900" loading="lazy"
+                     alt="Antes e depois do menu Iniciar: a tela de blocos sem ponto de partida e o novo menu com lista de programas.">
+                <div class="telas__texto">
+                  <p class="anotacao anotacao--sem-seta">3. o menu Iniciar</p>
+                  <p>O botão Iniciar de volta, com a lista clássica e os blocos opcionais no mesmo painel.</p>
+                </div>
+              </li>
+
+              <li class="telas__slide telas__slide--capa" aria-label="4 de 6">
+                <img class="telas__foto telas__foto--capa" src="imagens/win8-config.webp" width="1600" height="900" loading="lazy"
+                     alt="Antes e depois das configurações rápidas: a barra lateral escondida e o novo painel de acesso rápido.">
+                <div class="telas__texto">
+                  <p class="anotacao anotacao--sem-seta">4. as configurações rápidas</p>
+                  <p>Wi-Fi, som e brilho em um clique, agrupados e com o mesmo visual do resto do sistema.</p>
+                </div>
+              </li>
+
+              <li class="telas__slide telas__slide--capa" aria-label="5 de 6">
+                <img class="telas__foto telas__foto--capa" src="imagens/win8-usabilidade.webp" width="1600" height="900" loading="lazy"
+                     alt="Tabela comparando quantos passos cada tarefa levava no Windows 7 e no Windows 8.">
+                <div class="telas__texto">
+                  <p class="anotacao anotacao--sem-seta">5. a usabilidade</p>
+                  <p>Tarefas simples, como ajustar o volume, passaram de 1 clique para 3 passos ou mais.</p>
+                </div>
+              </li>
+
+              <li class="telas__slide telas__slide--capa" aria-label="6 de 6">
+                <img class="telas__foto telas__foto--capa" src="imagens/win8-conclusao.webp" width="1600" height="900" loading="lazy"
+                     alt="Slide da conclusão dos problemas do Windows 8.">
+                <div class="telas__texto">
+                  <p class="anotacao anotacao--sem-seta">6. a conclusão</p>
+                  <p>A falha visual levou à falha funcional: o design não comunicava como usar o produto.</p>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+          <div class="telas__controles">
+            <button class="telas__seta" type="button" data-telas="anterior" aria-label="Anterior"><img src="imagens/seta-esquerda.svg" width="20" height="32" alt=""></button>
+            <div class="telas__pontos" role="tablist" aria-label="Escolher imagem"></div>
+            <button class="telas__seta" type="button" data-telas="proxima" aria-label="Próxima"><img src="imagens/seta-direita.svg" width="20" height="32" alt=""></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- O DESAFIO -->
+      <section class="secao">
+        <div class="container estudo__bloco">
+          <p class="anotacao anotacao--para-direita">o desafio</p>
+          <div>
+            <h2>Um sistema, duas interfaces.</h2>
+            <p class="secao__resumo">Lançado em 2012, o Windows 8 tentou servir ao tablet e ao computador ao mesmo tempo. Tirou o botão Iniciar, que existia desde 1995, e colocou uma tela feita para o toque em quem usava mouse. O resultado: usuários perdidos, e o Windows 7 continuou sendo o mais usado.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- COMO ANALISAMOS -->
+      <section class="secao secao--branca">
+        <div class="container estudo__bloco">
+          <p class="anotacao anotacao--para-direita">como analisamos</p>
+          <ol class="etapas">
+            <li>
+              <h3>Proporção e ritmo visual</h3>
+              <p>Uma grade repetitiva, sem hierarquia e sem um ponto de partida.</p>
+            </li>
+            <li>
+              <h3>Ergonomia</h3>
+              <p>Cantos ativos invisíveis e blocos pensados para o dedo, não para o mouse.</p>
+            </li>
+            <li>
+              <h3>Linguagem formal e coerência</h3>
+              <p>Caixa alta, mistura de estilos e dois sistemas diferentes dentro de um só.</p>
+            </li>
+            <li>
+              <h3>Usabilidade</h3>
+              <p>Funções importantes escondidas, sem nenhuma pista visual de onde ficavam.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- O QUE DESCOBRIMOS -->
+      <section class="secao">
+        <div class="container">
+          <div class="secao__cabecalho">
+            <div>
+              <p class="anotacao">o que descobrimos</p>
+              <h2>O problema era visual e funcional.</h2>
+            </div>
+          </div>
+          <div class="estudo__decisoes">
+            <div class="academico__card">
+              <p class="academico__tipo">Funções escondidas</p>
+              <h3>Cantos que ninguém via</h3>
+              <p>A barra de configurações só abria levando o mouse a um canto invisível da tela.</p>
+            </div>
+            <div class="academico__card">
+              <p class="academico__tipo">Passos a mais</p>
+              <h3>O simples ficou complexo</h3>
+              <p>Ajustar o volume, que era 1 clique, passou a levar 3 passos ou mais.</p>
+            </div>
+            <div class="academico__card">
+              <p class="academico__tipo">Estímulos demais</p>
+              <h3>Tudo gritando ao mesmo tempo</h3>
+              <p>Cores saturadas competindo entre si, enquanto o essencial ficava escondido.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- O REDESIGN EM NÚMEROS -->
+      <section class="secao secao--branca">
+        <div class="container">
+          <div class="secao__cabecalho">
+            <div>
+              <p class="anotacao">o redesign</p>
+              <h2>Menos passos, mais clareza.</h2>
+            </div>
+          </div>
+          <dl class="numeros estudo__numeros">
+            <div>
+              <dt>telas redesenhadas</dt>
+              <dd data-contar="3">3</dd>
+            </div>
+            <div>
+              <dt>clique para as configurações rápidas</dt>
+              <dd data-contar="1">1</dd>
+            </div>
+            <div class="numeros__destaque">
+              <dt>cliques para desligar (eram 5)</dt>
+              <dd data-contar="2" data-de="5">2</dd>
+              <p class="anotacao">e o botão Iniciar de volta</p>
+            </div>
+          </dl>
+
+          <div class="acoes estudo__acoes">
+            <a class="botao" href="projetos-faculdade.html">Voltar aos projetos da faculdade</a>
+          </div>
+        </div>
+      </section>
+
+    </article>
+
+  </main>
+
+  <!-- ================= CONTATO (rodapé em duas faixas) ================= -->
+  <footer id="contato" class="contato">
+    <div class="container contato__chamada">
+      <p class="anotacao">vamos conversar?</p>
+      <h2>Quer falar sobre um projeto, um estágio ou só tomar um café?</h2>
+      <a class="botao contato__botao" href="https://wa.link/a5lmdj" target="_blank" rel="noopener">Me chama no WhatsApp</a>
+    </div>
+
+    <div class="contato__base">
+      <div class="container contato__colunas">
+        <span class="contato__selo" aria-hidden="true"><img src="imagens/marca-borboleta.svg" width="28" height="28" alt=""></span>
+        <div>
+          <p class="contato__titulo">Fale comigo</p>
+          <ul>
+            <li><a href="https://wa.link/a5lmdj" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><a class="contato__email-curto" href="mailto:geisedossantoscabral@gmail.com?subject=Contato%20pelo%20portf%C3%B3lio">E-mail</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="contato__titulo">Redes</p>
+          <ul>
+            <li><a href="https://www.linkedin.com/in/geisemoreira/" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://www.instagram.com/geisemoreiradesigner/" target="_blank" rel="noopener">Instagram</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="contato__titulo">Onde estou</p>
+          <ul>
+            <li>São Miguel do Oeste · SC</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script>
+        // No computador, o clique abre um e-mail novo no Gmail (numa aba nova), já com o endereço e o assunto.
+        // No celular, continua o mailto, que abre o app de e-mail da pessoa.
+        (function () {
+          var link = document.querySelector('.contato__email-curto');
+          if (!link || /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent)) return;
+          link.href = 'https://mail.google.com/mail/?view=cm&fs=1&to=geisedossantoscabral@gmail.com&su=' + encodeURIComponent('Contato pelo portfólio');
+          link.target = '_blank'; link.rel = 'noopener';
+        })();
+        // A pergunta do rodapé aparece palavra por palavra (subindo e saindo do desfoque) quando chega na tela.
+        // A última palavra, "café?", ganha o rosa neon.
+        (function () {
+          var titulo = document.querySelector('.contato h2');
+          if (!titulo || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+          var palavras = titulo.textContent.trim().split(/\s+/);
+          titulo.setAttribute('aria-label', titulo.textContent.trim());
+          titulo.innerHTML = palavras.map(function (p, i) {
+            var destaque = i === palavras.length - 1 ? ' palavra--destaque' : '';
+            return '<span class="palavra' + destaque + '" aria-hidden="true" style="--i:' + i + '">' + p + '</span>';
+          }).join(' ');
+          titulo.classList.add('titulo-animado');
+          if (!('IntersectionObserver' in window)) { titulo.classList.add('titulo-animado--visivel'); return; }
+          new IntersectionObserver(function (e, olho) {
+            if (e[0].isIntersecting) { titulo.classList.add('titulo-animado--visivel'); olho.disconnect(); }
+          }, { threshold: 0.6 }).observe(titulo);
+        })();
+      </script>
+  </footer>
+
+  <script src="telas-slider.js" defer></script>
+  <script src="borboleta-voo.js" defer></script>
+  <script src="contador.js" defer></script>
+  <script>
+    // Menu do celular: o botão ☰ abre e fecha a lista de links
+    (function () {
+      var topo = document.querySelector('.topo'), botao = document.querySelector('.menu-botao');
+      if (!botao) return;
+      function fechar() { topo.classList.remove('topo--aberto'); botao.setAttribute('aria-expanded', 'false'); botao.setAttribute('aria-label', 'Abrir menu'); }
+      botao.addEventListener('click', function () {
+        var abrir = !topo.classList.contains('topo--aberto');
+        topo.classList.toggle('topo--aberto', abrir);
+        botao.setAttribute('aria-expanded', String(abrir));
+        botao.setAttribute('aria-label', abrir ? 'Fechar menu' : 'Abrir menu');
+      });
+      topo.querySelectorAll('.menu a').forEach(function (a) { a.addEventListener('click', fechar); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') fechar(); });
+    })();
+  </script>
+</body>
+</html>

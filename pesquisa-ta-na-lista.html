@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tá na Lista | Pesquisa | Geise Moreira</title>
+  <meta name="description" content="Responda à pesquisa do Tá na Lista e ajude a criar um app que monta a sua lista de compras do mês.">
+  <!-- prévia quando o link é compartilhado (WhatsApp, LinkedIn...): endereço do site no Cloudflare.
+       Se o site mudar de endereço (ex.: domínio próprio), troque "https://cadernodedesign.designday.workers.dev" aqui. -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Tá na Lista | Pesquisa | Geise Moreira">
+  <meta property="og:description" content="Responda à pesquisa do Tá na Lista e ajude a criar um app que monta a sua lista de compras do mês.">
+  <meta property="og:image" content="https://cadernodedesign.designday.workers.dev/imagens/compartilhar.jpg">
+  <meta property="og:url" content="https://cadernodedesign.designday.workers.dev/pesquisa-ta-na-lista.html">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fontes (Google Fonts, uso comercial liberado):
+       Atkinson Hyperlegible Next = textos | Caveat = anotações à mão -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;500;600&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Favicon: a borboleta (dois "g" espelhados) -->
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <link rel="stylesheet" href="design.css">
+</head>
+<body>
+
+  <!-- Atalho para quem navega pelo teclado (aparece ao apertar Tab) -->
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- ================= NAVEGAÇÃO ================= -->
+  <header class="topo">
+    <div class="container topo__linha">
+      <a class="marca" href="index.html">
+        <img class="marca__icone" src="imagens/marca-borboleta.svg" width="24" height="24" alt="">
+        Geise Moreira
+        <span class="anotacao anotacao--sem-seta marca__nota">caderno de design</span>
+      </a>
+
+      <nav aria-label="Principal" id="menu-principal">
+        <ul class="menu">
+          <li><a href="index.html#projetos">Projetos</a></li>
+          <li><a href="projetos-faculdade.html">Faculdade</a></li>
+          <li><a href="index.html#sobre">Sobre</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <a class="botao botao--secundario botao--pulso" href="https://wa.link/a5lmdj" target="_blank" rel="noopener">Vamos conversar</a>
+
+      <!-- botão do menu no celular (☰) -->
+      <button class="menu-botao" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <article class="estudo">
+      <header class="secao estudo__topo">
+        <div class="container">
+          <a class="academico__voltar" href="diario-ta-na-lista.html">← voltar ao diário</a>
+          <h1 class="estudo__titulo">Me ajuda com o <span class="marca-texto">Tá na Lista?</span></h1>
+          <p class="secao__resumo">São 5 perguntas de marcar sobre como você faz as compras da casa. Não precisa se identificar.</p>
+        </div>
+      </header>
+
+      <section class="secao diario-pagina">
+        <div class="container">
+          <!-- ================= PESQUISA (5 perguntas de marcar + sugestão opcional) =================
+               As respostas chegam no e-mail da Geise pelo FormSubmit (formsubmit.co).
+               Na PRIMEIRA resposta, o FormSubmit manda um e-mail pedindo para confirmar o endereço: é só clicar em "Activate". -->
+          <form class="pesquisa" id="pesquisa" novalidate data-email="geisedossantoscabral@gmail.com">
+            <p class="anotacao">leva menos de 1 minuto</p>
+
+            <fieldset class="pesquisa__pergunta">
+              <legend><span>1</span>Com que frequência você faz as compras da casa?</legend>
+              <div class="pesquisa__opcoes">
+                <label><input type="radio" name="p1" value="Toda semana" required><span>Toda semana</span></label>
+                <label><input type="radio" name="p1" value="A cada 15 dias" required><span>A cada 15 dias</span></label>
+                <label><input type="radio" name="p1" value="Uma vez por mês" required><span>Uma vez por mês</span></label>
+                <label><input type="radio" name="p1" value="Só quando falta algo" required><span>Só quando falta algo</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="pesquisa__pergunta">
+              <legend><span>2</span>Como você monta a sua lista hoje?</legend>
+              <div class="pesquisa__opcoes">
+                <label><input type="radio" name="p2" value="No papel" required><span>No papel</span></label>
+                <label><input type="radio" name="p2" value="No bloco de notas do celular" required><span>No bloco de notas do celular</span></label>
+                <label><input type="radio" name="p2" value="Em um app de lista" required><span>Em um app de lista</span></label>
+                <label><input type="radio" name="p2" value="De cabeça, sem lista" required><span>De cabeça, sem lista</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="pesquisa__pergunta">
+              <legend><span>3</span>Você compara preços entre mercados?</legend>
+              <div class="pesquisa__opcoes">
+                <label><input type="radio" name="p3" value="Sempre" required><span>Sempre</span></label>
+                <label><input type="radio" name="p3" value="Às vezes" required><span>Às vezes</span></label>
+                <label><input type="radio" name="p3" value="Quase nunca" required><span>Quase nunca</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="pesquisa__pergunta">
+              <legend><span>4</span>Qual destas formas de registrar uma compra daria menos trabalho para você?</legend>
+              <div class="pesquisa__opcoes">
+                <label><input type="radio" name="p4" value="Fotografar a nota fiscal" required><span>Fotografar a nota fiscal</span></label>
+                <label><input type="radio" name="p4" value="Ler o QR code da nota" required><span>Ler o QR code da nota</span></label>
+                <label><input type="radio" name="p4" value="Digitar os itens" required><span>Digitar os itens</span></label>
+                <label><input type="radio" name="p4" value="Nenhuma, eu não registraria" required><span>Nenhuma, eu não registraria</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="pesquisa__pergunta">
+              <legend><span>5</span>O que você mais gostaria que o app fizesse por você?</legend>
+              <div class="pesquisa__opcoes">
+                <label><input type="radio" name="p5" value="Lembrar o que está acabando" required><span>Lembrar o que está acabando</span></label>
+                <label><input type="radio" name="p5" value="Mostrar onde está mais barato" required><span>Mostrar onde está mais barato</span></label>
+                <label><input type="radio" name="p5" value="Montar a lista sozinho" required><span>Montar a lista sozinho</span></label>
+                <label><input type="radio" name="p5" value="Mostrar quanto gastei no mês" required><span>Mostrar quanto gastei no mês</span></label>
+              </div>
+            </fieldset>
+
+            <div class="pesquisa__pergunta pesquisa__sugestao">
+              <label for="sugestao"><span>6</span>Deixe sua sugestão <em>(opcional)</em></label>
+              <textarea id="sugestao" name="sugestao" rows="3" maxlength="600" placeholder="Uma ideia, uma reclamação do seu mercado, o que vier..."></textarea>
+            </div>
+
+            <!-- campo escondido contra robôs -->
+            <input type="text" name="_honey" class="pesquisa__mel" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+            <div class="pesquisa__fim">
+              <button class="botao" type="submit">Enviar respostas</button>
+              <a class="botao botao--secundario" href="diario-ta-na-lista.html">Voltar ao diário</a>
+              <p class="pesquisa__aviso" role="status" aria-live="polite"></p>
+            </div>
+          </form>
+
+          <div class="pesquisa__obrigada" id="pesquisa-obrigada" hidden>
+            <h2>Obrigada! <span class="marca-texto">Sua resposta chegou.</span></h2>
+            <p class="secao__resumo">Ela vai me ajudar a decidir o próximo passo do Tá na Lista.</p>
+            <a class="botao" href="diario-ta-na-lista.html">Voltar ao diário</a>
+          </div>
+        </div>
+      </section>
+    </article>
+
+  </main>
+
+  <!-- ================= CONTATO (rodapé em duas faixas) ================= -->
+  <footer id="contato" class="contato">
+    <div class="container contato__chamada">
+      <p class="anotacao">vamos conversar?</p>
+      <h2>Quer falar sobre um projeto, um estágio ou só tomar um café?</h2>
+      <a class="botao contato__botao" href="https://wa.link/a5lmdj" target="_blank" rel="noopener">Me chama no WhatsApp</a>
+    </div>
+
+    <div class="contato__base">
+      <div class="container contato__colunas">
+        <span class="contato__selo" aria-hidden="true"><img src="imagens/marca-borboleta.svg" width="28" height="28" alt=""></span>
+        <div>
+          <p class="contato__titulo">Fale comigo</p>
+          <ul>
+            <li><a href="https://wa.link/a5lmdj" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><a class="contato__email-curto" href="mailto:geisedossantoscabral@gmail.com?subject=Contato%20pelo%20portf%C3%B3lio">E-mail</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="contato__titulo">Redes</p>
+          <ul>
+            <li><a href="https://www.linkedin.com/in/geisemoreira/" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://www.instagram.com/geisemoreiradesigner/" target="_blank" rel="noopener">Instagram</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="contato__titulo">Onde estou</p>
+          <ul>
+            <li>São Miguel do Oeste · SC</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script>
+        // No computador, o clique abre um e-mail novo no Gmail (numa aba nova), já com o endereço e o assunto.
+        // No celular, continua o mailto, que abre o app de e-mail da pessoa.
+        (function () {
+          var link = document.querySelector('.contato__email-curto');
+          if (!link || /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent)) return;
+          link.href = 'https://mail.google.com/mail/?view=cm&fs=1&to=geisedossantoscabral@gmail.com&su=' + encodeURIComponent('Contato pelo portfólio');
+          link.target = '_blank'; link.rel = 'noopener';
+        })();
+        // A pergunta do rodapé aparece palavra por palavra (subindo e saindo do desfoque) quando chega na tela.
+        // A última palavra, "café?", ganha o rosa neon.
+        (function () {
+          var titulo = document.querySelector('.contato h2');
+          if (!titulo || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+          var palavras = titulo.textContent.trim().split(/\s+/);
+          titulo.setAttribute('aria-label', titulo.textContent.trim());
+          titulo.innerHTML = palavras.map(function (p, i) {
+            var destaque = i === palavras.length - 1 ? ' palavra--destaque' : '';
+            return '<span class="palavra' + destaque + '" aria-hidden="true" style="--i:' + i + '">' + p + '</span>';
+          }).join(' ');
+          titulo.classList.add('titulo-animado');
+          if (!('IntersectionObserver' in window)) { titulo.classList.add('titulo-animado--visivel'); return; }
+          new IntersectionObserver(function (e, olho) {
+            if (e[0].isIntersecting) { titulo.classList.add('titulo-animado--visivel'); olho.disconnect(); }
+          }, { threshold: 0.6 }).observe(titulo);
+        })();
+      </script>
+  </footer>
+
+  <script src="pesquisa.js" defer></script>
+  <script>
+    // Menu do celular: o botão ☰ abre e fecha a lista de links
+    (function () {
+      var topo = document.querySelector('.topo'), botao = document.querySelector('.menu-botao');
+      if (!botao) return;
+      function fechar() { topo.classList.remove('topo--aberto'); botao.setAttribute('aria-expanded', 'false'); botao.setAttribute('aria-label', 'Abrir menu'); }
+      botao.addEventListener('click', function () {
+        var abrir = !topo.classList.contains('topo--aberto');
+        topo.classList.toggle('topo--aberto', abrir);
+        botao.setAttribute('aria-expanded', String(abrir));
+        botao.setAttribute('aria-label', abrir ? 'Fechar menu' : 'Abrir menu');
+      });
+      topo.querySelectorAll('.menu a').forEach(function (a) { a.addEventListener('click', fechar); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') fechar(); });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guarda-roupa Viena | Projeto II | Geise Moreira</title>
+  <meta name="description" content="Estudo de caso do guarda-roupa Viena, projeto de design de produto feito com a MX Móveis pelo método de Löbach.">
+  <!-- prévia quando o link é compartilhado (WhatsApp, LinkedIn...): endereço do site no Cloudflare.
+       Se o site mudar de endereço (ex.: domínio próprio), troque "https://cadernodedesign.designday.workers.dev" aqui. -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Guarda-roupa Viena | Projeto II | Geise Moreira">
+  <meta property="og:description" content="Estudo de caso do guarda-roupa Viena, projeto de design de produto feito com a MX Móveis pelo método de Löbach.">
+  <meta property="og:image" content="https://cadernodedesign.designday.workers.dev/imagens/compartilhar.jpg">
+  <meta property="og:url" content="https://cadernodedesign.designday.workers.dev/estudo-de-caso-guarda-roupa-viena.html">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fontes (Google Fonts, uso comercial liberado):
+       Atkinson Hyperlegible Next = textos | Caveat = anotações à mão -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;500;600&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Favicon: a borboleta (dois "g" espelhados) -->
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <link rel="stylesheet" href="design.css">
+</head>
+<body>
+
+  <!-- Atalho para quem navega pelo teclado (aparece ao apertar Tab) -->
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- ================= NAVEGAÇÃO ================= -->
+  <header class="topo">
+    <div class="container topo__linha">
+      <a class="marca" href="index.html">
+        <img class="marca__icone" src="imagens/marca-borboleta.svg" width="24" height="24" alt="">
+        Geise Moreira
+        <span class="anotacao anotacao--sem-seta marca__nota">caderno de design</span>
+      </a>
+
+      <nav aria-label="Principal" id="menu-principal">
+        <ul class="menu">
+          <li><a href="index.html#projetos">Projetos</a></li>
+          <li><a href="projetos-faculdade.html">Faculdade</a></li>
+          <li><a href="index.html#sobre">Sobre</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <a class="botao botao--secundario botao--pulso" href="https://wa.link/a5lmdj" target="_blank" rel="noopener">Vamos conversar</a>
+
+      <!-- botão do menu no celular (☰) -->
+      <button class="menu-botao" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- ================= ESTUDO DE CASO: FOTOS SEM FEED ================= -->
+    <article class="estudo">
+
+      <!-- borboleta que voa pelas laterais da página e acende as bolinhas por onde passa (borboleta-voo.js) -->
+      <div class="voo" aria-hidden="true">
+        <canvas class="voo__rastro"></canvas>
+        <img class="voo__borboleta" src="imagens/marca-borboleta.svg" width="30" height="30" alt="">
+      </div>
+
+      <header class="secao estudo__topo">
+        <div class="container">
+          <a class="academico__voltar" href="projetos-faculdade.html">← voltar aos projetos da faculdade</a>
+
+          <p class="rotulo">Projeto II · Design de Produto</p>
+          <h1 class="estudo__titulo"><span class="sem-quebra">Guarda‑roupa</span> <span class="marca-texto">Viena.</span></h1>
+          <p class="secao__resumo">Um guarda-roupa minimalista para a MX Móveis: portas de correr, espelho e nichos externos, para organizar melhor sem encarecer a produção.</p>
+
+          <dl class="estudo__ficha">
+            <div><dt>Disciplina</dt><dd>Projeto II, Design Unoesc</dd></div>
+            <div><dt>Dupla</dt><dd>Geise Moreira e Valentina Delanoy</dd></div>
+            <div><dt>Parceria</dt><dd>MX Móveis</dd></div>
+            <div><dt>Orientação</dt><dd>Prof. Willian Matida</dd></div>
+          </dl>
+        </div>
+      </header>
+
+      <!-- O RENDER E O PROTÓTIPO (slider: setas, bolinhas e arrastar no celular)
+           Para colocar mais uma foto, copie um <li class="telas__slide"> inteiro -->
+      <section class="telas" aria-roledescription="carrossel" aria-label="Render e fotos da maquete">
+        <div class="container">
+          <div class="telas__janela">
+            <ul class="telas__trilho">
+
+              <li class="telas__slide telas__slide--capa" aria-label="1 de 11">
+                <img class="telas__foto telas__foto--capa" src="imagens/viena-quarto.webp" width="1600" height="900" loading="eager"
+                     alt="Render do guarda-roupa Viena num quarto: porta verde jade fosco, porta de espelho, nichos de madeira com plantas e livros, ao lado da cama.">
+                <div class="telas__texto">
+                  <p class="anotacao anotacao--sem-seta">1. o render</p>
+                  <p>A proposta final no quarto: verde jade fosco, detalhes em madeira e o espelho na porta de correr.</p>
+                </div>
+              </li>
+
+              <li class="telas__slide telas__slide--foto" aria-label="2 de 11">
+                <img class="telas__foto" src="imagens/viena-pecas.webp" width="825" height="1100" loading="lazy"
+                     alt="Peças de madeira da maquete abertas em leque sobre a mesa, com as portas verdes ao lado.">
+                <div class="telas__texto">
+                  <p class="anotacao anotacao--sem-seta">2. as peças</p>
+                  <p>Cada parte da maquete cortada na escala 1:10, antes da montagem.</p>
+                </div>
+              </li>
+
+              <li class="telas__slide telas__slide--foto" aria-label="3 de 11">
+                <img class="telas__foto telas__foto--deitada" src="imagens/viena-gavetas.webp" width="1100" height="825" loading="lazy"
+                     alt="Quatro gavetas da maquete vistas de cima, com a frente verde e um recorte para puxar.">
+                <div class="telas__texto">
+                  <p class="anotacao anotacao--sem-seta">3. as gavetas</p>
+                  <p>Uma a uma, com a frente verde e o recorte que faz o papel de puxador.</p>
+                </div>
+              </li>
+
+              <li class="telas__slide telas__slide--foto" aria-label="4 de 11">
+                <img class="telas__foto" src="imagens/viena-porta.webp" width="825" height="1100" loading="lazy"
+                     alt="Porta verde da maquete deitada sobre a mesa, com um puxador fino de madeira na lateral.">
+                <div class="telas__texto">
+                  <p class="anotacao anotacao--sem-seta">4. a porta</p>
+                  <p>A porta de correr verde, com o puxador em madeira.</p>
+                </div>
+              </li>
+
+              <li class="telas__slide telas__slide--foto" aria-label="5 de 11">
+                <img class="telas__foto" src="imagens/viena-espelho.webp" width="825" height="1100" loading="lazy"
+                     alt="Porta da maquete com quatro placas de espelho e um puxador de madeira.">
+                <div class="telas__texto">
+                  <p class="anotacao anotacao--sem-seta">5. o espelho</p>
+                  <p>Na outra porta, o espelho dividido em quatro placas.</p>
+                </div>
+              </li>
+
+              <li class="telas__slide telas__slide--foto" aria-label="6 de 11">
+                <img class="telas__foto" src="imagens/viena-montagem.webp" width="825" height="1100" loading="lazy"
+                     alt="Estrutura interna da maquete presa com elásticos: cabideiro, prateleiras e gavetas verdes.">
+                <div class="telas__texto">
+                  <p class="anotacao anotacao--sem-seta">6. a montagem</p>
+                  <p>Elásticos segurando a estrutura enquanto a cola secava.</p>
+                </div>
+              </li>
+
+              <li class="telas__slide telas__slide--foto" aria-label="7 de 11">
+                <img class="telas__foto" src="imagens/viena-fechado.webp" width="825" height="1100" loading="lazy"
+                     alt="Maquete pronta e fechada: porta verde, porta de espelho, nichos de madeira na lateral esquerda.">
+                <div class="telas__texto">
+                  <p class="anotacao anotacao--sem-seta">7. pronto</p>
+                  <p>O guarda-roupa fechado, com os nichos externos na lateral.</p>
+                </div>
+              </li>
+
+              <li class="telas__slide telas__slide--foto" aria-label="8 de 11">
+                <img class="telas__foto" src="imagens/viena-aberto.webp" width="825" height="1100" loading="lazy"
+                     alt="Maquete com a porta verde deslizada para o lado, mostrando o cabideiro e duas gavetas.">
+                <div class="telas__texto">
+                  <p class="anotacao anotacao--sem-seta">8. por dentro</p>
+                  <p>Com a porta aberta: cabideiro em cima, gavetas embaixo.</p>
+                </div>
+              </li>
+
+              <li class="telas__slide telas__slide--foto" aria-label="9 de 11">
+                <img class="telas__foto" src="imagens/viena-nichos.webp" width="825" height="1100" loading="lazy"
+                     alt="Detalhe dos nichos externos de madeira na lateral da maquete.">
+                <div class="telas__texto">
+                  <p class="anotacao anotacao--sem-seta">9. os nichos</p>
+                  <p>Prateleiras abertas por fora, para o que se usa todo dia.</p>
+                </div>
+              </li>
+
+              <li class="telas__slide telas__slide--foto" aria-label="10 de 11">
+                <img class="telas__foto" src="imagens/viena-gavetas-abertas.webp" width="825" height="1100" loading="lazy"
+                     alt="Lateral da maquete com as duas gavetas verdes puxadas para fora.">
+                <div class="telas__texto">
+                  <p class="anotacao anotacao--sem-seta">10. as gavetas abertas</p>
+                  <p>As gavetas correm de verdade, como no móvel em tamanho real.</p>
+                </div>
+              </li>
+
+              <li class="telas__slide telas__slide--foto" aria-label="11 de 11">
+                <img class="telas__foto" src="imagens/viena-puxador.webp" width="825" height="1100" loading="lazy"
+                     alt="Close do puxador de madeira na porta verde, com a porta de espelho ao fundo.">
+                <div class="telas__texto">
+                  <p class="anotacao anotacao--sem-seta">11. o puxador</p>
+                  <p>O detalhe que liga a porta à madeira do resto do móvel.</p>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+          <div class="telas__controles">
+            <button class="telas__seta" type="button" data-telas="anterior" aria-label="Foto anterior"><img src="imagens/seta-esquerda.svg" width="20" height="32" alt=""></button>
+            <div class="telas__pontos" role="tablist" aria-label="Escolher foto"></div>
+            <button class="telas__seta" type="button" data-telas="proxima" aria-label="Próxima foto"><img src="imagens/seta-direita.svg" width="20" height="32" alt=""></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- O DESAFIO -->
+      <section class="secao">
+        <div class="container estudo__bloco">
+          <p class="anotacao anotacao--para-direita">o desafio</p>
+          <div>
+            <h2>Organizar mais, sem encarecer o móvel.</h2>
+            <p class="secao__resumo">A MX Móveis queria um guarda-roupa novo para a sua linha, pensado para pessoas de 20 a 59 anos, da classe média. O móvel precisava guardar mais e melhor, com uma produção simples o bastante para manter o preço acessível.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- COMO PENSAMOS -->
+      <section class="secao secao--branca">
+        <div class="container estudo__bloco">
+          <p class="anotacao anotacao--para-direita">como pensamos</p>
+          <ol class="etapas">
+            <li>
+              <h3>Análise</h3>
+              <p>Estudamos o público, a empresa e os guarda-roupas que já existem no mercado.</p>
+            </li>
+            <li>
+              <h3>Alternativas</h3>
+              <p>Moodboards e esboços à mão, até chegar a algumas propostas.</p>
+            </li>
+            <li>
+              <h3>Avaliação</h3>
+              <p>Comparamos as propostas com os requisitos do projeto e escolhemos uma.</p>
+            </li>
+            <li>
+              <h3>Solução</h3>
+              <p>O render 3D e a maquete em escala, montada peça por peça.</p>
+            </li>
+          </ol>
+          <p class="anotacao anotacao--sem-seta estudo__metodo">seguindo o método de Löbach</p>
+        </div>
+      </section>
+
+      <!-- DECISÕES -->
+      <section class="secao">
+        <div class="container">
+          <div class="secao__cabecalho">
+            <div>
+              <p class="anotacao">cada detalhe pensado</p>
+              <h2>Um móvel que cabe no quarto e na rotina.</h2>
+            </div>
+          </div>
+          <div class="estudo__decisoes">
+            <div class="academico__card">
+              <p class="academico__tipo">Portas de correr</p>
+              <h3>Abrem sem pedir espaço</h3>
+              <p>Não precisam de área livre na frente, então cabem até em quartos pequenos.</p>
+            </div>
+            <div class="academico__card">
+              <p class="academico__tipo">Espelho</p>
+              <h3>Corpo inteiro, na própria porta</h3>
+              <p>Um espelho grande sem ocupar outra parede do quarto.</p>
+            </div>
+            <div class="academico__card">
+              <p class="academico__tipo">Nichos externos</p>
+              <h3>O dia a dia à mão</h3>
+              <p>Sapatos e objetos de uso diário ficam por fora, sem precisar abrir o móvel.</p>
+            </div>
+            <div class="academico__card">
+              <p class="academico__tipo">Cor e material</p>
+              <h3>Verde jade com madeira</h3>
+              <p>MDF em verde jade fosco com detalhes amadeirados: calmo e fácil de combinar.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MEDIDAS -->
+      <section class="secao secao--branca">
+        <div class="container">
+          <div class="secao__cabecalho">
+            <div>
+              <p class="anotacao">em números</p>
+              <h2>Do esboço à maquete.</h2>
+            </div>
+          </div>
+          <dl class="numeros estudo__numeros">
+            <div>
+              <dt>de largura</dt>
+              <dd>2,40 m</dd>
+            </div>
+            <div>
+              <dt>de altura</dt>
+              <dd>2,20 m</dd>
+            </div>
+            <div>
+              <dt>de profundidade</dt>
+              <dd>0,60 m</dd>
+            </div>
+            <div class="numeros__destaque">
+              <dt>escala da maquete</dt>
+              <dd>1:10</dd>
+              <p class="anotacao">montada à mão</p>
+            </div>
+          </dl>
+
+          <div class="acoes estudo__acoes">
+            <a class="botao" href="projetos-faculdade.html">Voltar aos projetos da faculdade</a>
+          </div>
+        </div>
+      </section>
+
+    </article>
+
+  </main>
+
+  <!-- ================= CONTATO (rodapé em duas faixas) ================= -->
+  <footer id="contato" class="contato">
+    <div class="container contato__chamada">
+      <p class="anotacao">vamos conversar?</p>
+      <h2>Quer falar sobre um projeto, um estágio ou só tomar um café?</h2>
+      <a class="botao contato__botao" href="https://wa.link/a5lmdj" target="_blank" rel="noopener">Me chama no WhatsApp</a>
+    </div>
+
+    <div class="contato__base">
+      <div class="container contato__colunas">
+        <span class="contato__selo" aria-hidden="true"><img src="imagens/marca-borboleta.svg" width="28" height="28" alt=""></span>
+        <div>
+          <p class="contato__titulo">Fale comigo</p>
+          <ul>
+            <li><a href="https://wa.link/a5lmdj" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><a class="contato__email-curto" href="mailto:geisedossantoscabral@gmail.com?subject=Contato%20pelo%20portf%C3%B3lio">E-mail</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="contato__titulo">Redes</p>
+          <ul>
+            <li><a href="https://www.linkedin.com/in/geisemoreira/" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://www.instagram.com/geisemoreiradesigner/" target="_blank" rel="noopener">Instagram</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="contato__titulo">Onde estou</p>
+          <ul>
+            <li>São Miguel do Oeste · SC</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script>
+        // No computador, o clique abre um e-mail novo no Gmail (numa aba nova), já com o endereço e o assunto.
+        // No celular, continua o mailto, que abre o app de e-mail da pessoa.
+        (function () {
+          var link = document.querySelector('.contato__email-curto');
+          if (!link || /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent)) return;
+          link.href = 'https://mail.google.com/mail/?view=cm&fs=1&to=geisedossantoscabral@gmail.com&su=' + encodeURIComponent('Contato pelo portfólio');
+          link.target = '_blank'; link.rel = 'noopener';
+        })();
+        // A pergunta do rodapé aparece palavra por palavra (subindo e saindo do desfoque) quando chega na tela.
+        // A última palavra, "café?", ganha o rosa neon.
+        (function () {
+          var titulo = document.querySelector('.contato h2');
+          if (!titulo || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+          var palavras = titulo.textContent.trim().split(/\s+/);
+          titulo.setAttribute('aria-label', titulo.textContent.trim());
+          titulo.innerHTML = palavras.map(function (p, i) {
+            var destaque = i === palavras.length - 1 ? ' palavra--destaque' : '';
+            return '<span class="palavra' + destaque + '" aria-hidden="true" style="--i:' + i + '">' + p + '</span>';
+          }).join(' ');
+          titulo.classList.add('titulo-animado');
+          if (!('IntersectionObserver' in window)) { titulo.classList.add('titulo-animado--visivel'); return; }
+          new IntersectionObserver(function (e, olho) {
+            if (e[0].isIntersecting) { titulo.classList.add('titulo-animado--visivel'); olho.disconnect(); }
+          }, { threshold: 0.6 }).observe(titulo);
+        })();
+      </script>
+  </footer>
+
+  <script src="telas-slider.js" defer></script>
+  <script src="borboleta-voo.js" defer></script>
+  <script>
+    // Menu do celular: o botão ☰ abre e fecha a lista de links
+    (function () {
+      var topo = document.querySelector('.topo'), botao = document.querySelector('.menu-botao');
+      if (!botao) return;
+      function fechar() { topo.classList.remove('topo--aberto'); botao.setAttribute('aria-expanded', 'false'); botao.setAttribute('aria-label', 'Abrir menu'); }
+      botao.addEventListener('click', function () {
+        var abrir = !topo.classList.contains('topo--aberto');
+        topo.classList.toggle('topo--aberto', abrir);
+        botao.setAttribute('aria-expanded', String(abrir));
+        botao.setAttribute('aria-label', abrir ? 'Fechar menu' : 'Abrir menu');
+      });
+      topo.querySelectorAll('.menu a').forEach(function (a) { a.addEventListener('click', fechar); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') fechar(); });
+    })();
+  </script>
+</body>
+</html>

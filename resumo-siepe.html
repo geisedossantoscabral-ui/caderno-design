@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resumo SIEPE | Ergonomia cognitiva e IA | Geise Moreira</title>
+  <meta name="description" content="A inteligência é artificial. A experiência é humana. Pesquisa sobre o papel do designer em interfaces com IA.">
+  <!-- prévia quando o link é compartilhado (WhatsApp, LinkedIn...): endereço do site no Cloudflare.
+       Se o site mudar de endereço (ex.: domínio próprio), troque "https://cadernodedesign.designday.workers.dev" aqui. -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Resumo SIEPE | Ergonomia cognitiva e IA | Geise Moreira">
+  <meta property="og:description" content="A inteligência é artificial. A experiência é humana. Pesquisa sobre o papel do designer em interfaces com IA.">
+  <meta property="og:image" content="https://cadernodedesign.designday.workers.dev/imagens/compartilhar.jpg">
+  <meta property="og:url" content="https://cadernodedesign.designday.workers.dev/resumo-siepe.html">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fontes (Google Fonts, uso comercial liberado):
+       Atkinson Hyperlegible Next = textos | Caveat = anotações à mão -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;500;600&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Favicon: a borboleta (dois "g" espelhados) -->
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <link rel="stylesheet" href="design.css">
+</head>
+<body>
+
+  <!-- Atalho para quem navega pelo teclado (aparece ao apertar Tab) -->
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- ================= NAVEGAÇÃO ================= -->
+  <header class="topo">
+    <div class="container topo__linha">
+      <a class="marca" href="index.html">
+        <img class="marca__icone" src="imagens/marca-borboleta.svg" width="24" height="24" alt="">
+        Geise Moreira
+        <span class="anotacao anotacao--sem-seta marca__nota">caderno de design</span>
+      </a>
+
+      <nav aria-label="Principal" id="menu-principal">
+        <ul class="menu">
+          <li><a href="index.html#projetos">Projetos</a></li>
+          <li><a href="projetos-faculdade.html">Faculdade</a></li>
+          <li><a href="index.html#sobre">Sobre</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <a class="botao botao--secundario botao--pulso" href="https://wa.link/a5lmdj" target="_blank" rel="noopener">Vamos conversar</a>
+
+      <!-- botão do menu no celular (☰) -->
+      <button class="menu-botao" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- ================= ESTUDO DE CASO: FOTOS SEM FEED ================= -->
+    <article class="estudo ia">
+
+      <!-- borboleta que voa pelas laterais da página e acende as bolinhas por onde passa (borboleta-voo.js) -->
+      <div class="voo" aria-hidden="true">
+        <canvas class="voo__rastro"></canvas>
+        <img class="voo__borboleta" src="imagens/marca-borboleta.svg" width="30" height="30" alt="">
+      </div>
+
+      <!-- ABERTURA -->
+      <header class="ia-hero">
+        <div class="container ia-hero__grade">
+          <div>
+            <a class="academico__voltar" href="projetos-faculdade.html">← voltar aos projetos da faculdade</a>
+            <p class="rotulo">Pesquisa · SIEPE Unoesc · Ergonomia cognitiva</p>
+            <h1 class="estudo__titulo ia-hero__titulo">A inteligência é artificial.<br><span class="marca-texto">A experiência<br>é humana.</span></h1>
+            <p class="secao__resumo ia-hero__texto">Interfaces com IA que respeitam a atenção, a compreensão e a capacidade de decisão de quem usa.</p>
+            <a class="botao" href="#ia-comparacao">Explore a experiência</a>
+          </div>
+
+          <div class="ia-hero__visual">
+            <span class="ia-mancha ia-mancha--1" aria-hidden="true"></span>
+            <span class="ia-mancha ia-mancha--2" aria-hidden="true"></span>
+            <!-- linhas que saem de trás da cabeça até os cartões (ficam antes da ilustração, por isso aparecem atrás dela) -->
+            <svg class="ia-linhas" viewBox="0 0 600 600" aria-hidden="true">
+              <path d="M166 66 C 230 40, 250 120, 262 190"/>
+              <path class="ia-linhas--verde" d="M441 188 C 432 148, 400 130, 340 170"/>
+              <circle cx="166" cy="66" r="5"/>
+              <circle class="ia-linhas--verde" cx="441" cy="188" r="5"/>
+            </svg>
+            <img class="ia-hero__retrato" src="imagens/geise-ilustracao-ia.webp" width="989" height="1000"
+                 alt="Ilustração da Geise de perfil, sorrindo, em tons de lilás.">
+            <div class="ia-flutua ia-flutua--1" aria-hidden="true"><span class="ia-brilho">✦</span><div><b>Por que esta sugestão?</b><i></i><i class="curta"></i></div></div>
+            <div class="ia-flutua ia-flutua--2" aria-hidden="true">
+              <svg class="ia-flutua__ico" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>
+              <div><b>Você está no controle</b><span class="ia-flutua__linha"><i></i><span class="ia-chave"></span></span></div>
+            </div>
+            <div class="ia-flutua ia-flutua--3" aria-hidden="true">
+              <svg class="ia-flutua__ico" viewBox="0 0 24 24"><path d="M8 5L3 10l5 5"/><path d="M3 10h11a6 6 0 0 1 0 12h-4"/></svg>
+              <div><b>Desfazer</b><i class="curta"></i></div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- COMPARAÇÃO INTERATIVA -->
+      <section class="secao secao--branca" id="ia-comparacao">
+        <div class="container">
+          <div class="ia-cabecalho">
+            <div>
+              <p class="anotacao">compare os dois lados</p>
+              <h2>Qual interface é mais fácil de entender?</h2>
+              <p>Três situações do dia a dia com IA, cada uma desenhada de dois jeitos. À esquerda, o problema. À direita, o que o design muda.</p>
+            </div>
+            <p class="anotacao anotacao--sem-seta ia-nota">exemplos ilustrativos: pode clicar!</p>
+          </div>
+
+          <!-- EXEMPLOS (slider: setas, bolinhas e arrastar no celular) -->
+          <div class="telas ia-exemplos" aria-roledescription="carrossel" aria-label="Exemplos de interfaces com IA">
+            <div class="telas__janela">
+              <ul class="telas__trilho">
+              <li class="telas__slide ia-exemplos__slide" aria-label="1 de 3">
+                <p class="ia-exemplos__titulo"><span>1.</span> planejar o dia</p>
+          <div class="ia-comparar">
+            <!-- excesso -->
+            <div class="ia-painel">
+              <p class="ia-selo ia-selo--problema">o problema</p>
+              <h3>Informação em excesso</h3>
+              <p class="ia-painel__sub">Muitas opções, pouco contexto.</p>
+              <div class="ia-app">
+                <ul class="ia-app__menu">
+                  <li class="ativo">Hoje</li><li>Planejamento</li><li>Projetos</li><li>Etiquetas</li><li>Mais</li>
+                </ul>
+                <div class="ia-app__lista">
+                  <div class="ia-app__busca"><span>O que você quer fazer?</span><b>Gerar</b></div>
+                  <p class="ia-anota ia-anota--rosa">↓ sobrecarga: tudo aparece de uma vez, com o mesmo peso</p>
+                  <div class="ia-app__filtros"><span class="ativo">Todas</span><span>Trabalho</span><span>Pessoal</span><span>Estudos</span><span>Outros</span></div>
+                  <ul class="ia-app__tarefas">
+                    <li><i></i>Revisar artigo<em class="alta">Alta</em><small>09:00</small></li>
+                    <li><i></i>Preparar apresentação<em class="media">Média</em><small>10:00</small></li>
+                    <li><i></i>Responder e-mails<em class="media">Média</em><small>11:00</small></li>
+                    <li><i></i>Estudar ergonomia<em class="baixa">Baixa</em><small>14:00</small></li>
+                    <li><i></i>Organizar arquivos<em class="baixa">Baixa</em><small>16:00</small></li>
+                  </ul>
+                  <p class="ia-anota ia-anota--rosa ia-anota--direita">↑ opacidade: a IA deu as prioridades, mas não explica por quê</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- clareza -->
+            <div class="ia-painel ia-painel--claro">
+              <p class="ia-selo ia-selo--solucao">a solução</p>
+              <h3>Clareza para decidir</h3>
+              <p class="ia-painel__sub">Uma sugestão objetiva, com explicação e controle.</p>
+              <div class="ia-sugestao">
+                <span class="ia-brilho">✦</span>
+                <div>
+                  <small>Sugestão da IA · confiança alta</small>
+                  <b>Comece revisando seu artigo.</b>
+                  <span>É a tarefa mais importante do dia e tem o prazo mais próximo.</span>
+                </div>
+              </div>
+              <p class="ia-anota">↑ uma sugestão só, com o nível de confiança à vista</p>
+              <ul class="ia-detalhes">
+                <li><span class="ia-ico">◷</span><div><b>Hoje, 09:00 – 10:30</b></div><em class="alta">Alta prioridade</em></li>
+                <li><span class="ia-ico">▤</span><div><b>Revisar artigo</b><span>Focar na seção de resultados. Estimativa de 1h30.</span></div></li>
+                <li class="ia-porque">
+                  <button type="button" aria-expanded="false"><span class="ia-ico">?</span><div><b>Por que esta sugestão?</b><span>toque para ver</span></div><span class="ia-seta">›</span></button>
+                  <p hidden>Baseada no prazo, na sua carga de trabalho e nos seus objetivos. A IA mostra os motivos para você decidir se concorda.</p>
+                </li>
+              </ul>
+              <p class="ia-anota">↑ o motivo fica guardado: só aparece se você quiser</p>
+              <div class="ia-acoes">
+                <button type="button" class="botao ia-confirmar">✓ Confirmar no meu plano</button>
+                <button type="button" class="botao botao--secundario ia-desfazer-btn" disabled>↶ Desfazer</button>
+              </div>
+              <p class="ia-anota">↑ quem decide é você, e dá para voltar atrás</p>
+              <p class="ia-aviso" role="status" aria-live="polite"></p>
+            </div>
+          </div>
+              </li>
+              <li class="telas__slide ia-exemplos__slide" aria-label="2 de 3">
+                <p class="ia-exemplos__titulo"><span>2.</span> escolher o que assistir</p>
+          <div class="ia-comparar">
+            <div class="ia-painel">
+              <p class="ia-selo ia-selo--problema">o problema</p>
+              <h3>Escolhas demais, nenhum motivo</h3>
+              <p class="ia-painel__sub">A IA recomenda, mas não diz por quê.</p>
+              <div class="ia-filmes">
+                <p class="ia-filmes__titulo">Recomendados para você</p>
+                <p class="ia-anota ia-anota--rosa">↓ sobrecarga: oito opções e nenhum critério</p>
+                <ul class="ia-filmes__grade">
+                  <li style="--c1:#5eb1ff;--c2:#1a66c9">Cidade Neon</li><li style="--c1:#ffb3c7;--c2:#c2185b">Mar de Inverno</li>
+                  <li style="--c1:#ffd36e;--c2:#c07a00">O Farol</li><li style="--c1:#9fe3c1;--c2:#1d7a4c">Raízes</li>
+                  <li style="--c1:#c9b8ff;--c2:#5b3fc4">Órbita</li><li style="--c1:#ffc49e;--c2:#c2551b">Duna Rosa</li>
+                  <li style="--c1:#a9d4ff;--c2:#2b5f99">Silêncio</li><li style="--c1:#e0e0e0;--c2:#5b616b">A Ponte</li>
+                </ul>
+                <p class="ia-anota ia-anota--rosa ia-anota--direita">↑ opacidade: por que esses? a IA não conta</p>
+                <div class="ia-filmes__auto"><span>O próximo começa em 5 segundos…</span><b>5</b></div>
+                <p class="ia-anota ia-anota--rosa ia-anota--direita">↑ sem controle: ele começa sozinho</p>
+              </div>
+            </div>
+
+            <div class="ia-painel ia-painel--claro">
+              <p class="ia-selo ia-selo--solucao">a solução</p>
+              <h3>Uma recomendação que se explica</h3>
+              <p class="ia-painel__sub">Menos opções, com o motivo e o controle à vista.</p>
+              <div class="ia-reco">
+                <div class="ia-reco__capa" style="--c1:#5eb1ff;--c2:#1a66c9">Cidade Neon</div>
+                <div class="ia-reco__info">
+                  <small>Sugestão da IA</small>
+                  <b>Cidade Neon</b>
+                  <span class="ia-reco__chance"><i style="width:92%"></i></span>
+                  <span class="ia-reco__numero">92% de chance de você gostar</span>
+                  <p class="ia-reco__motivo">Porque você assistiu <b>Mar de Inverno</b> e curte suspense.</p>
+                </div>
+              </div>
+              <p class="ia-anota">↑ o nível de confiança e o motivo, em uma linha</p>
+              <div class="ia-acoes">
+                <button type="button" class="botao">▶ Assistir</button>
+                <button type="button" class="botao botao--secundario ia-reco__nao">Não tenho interesse</button>
+              </div>
+              <p class="ia-aviso ia-reco__aviso" role="status" aria-live="polite"></p>
+              <p class="ia-anota">↑ você ensina a IA, e pode desfazer</p>
+            </div>
+          </div>
+              </li>
+              <li class="telas__slide ia-exemplos__slide" aria-label="3 de 3">
+                <p class="ia-exemplos__titulo"><span>3.</span> revisar uma mensagem</p>
+          <div class="ia-comparar">
+            <div class="ia-painel">
+              <p class="ia-selo ia-selo--problema">o problema</p>
+              <h3>A IA mudou o seu texto sem avisar</h3>
+              <p class="ia-painel__sub">Você escreveu uma coisa e apareceu outra.</p>
+              <div class="ia-texto">
+                <p class="ia-texto__rotulo">sua mensagem</p>
+                <p class="ia-texto__caixa">Prezados colaboradores, informamos que a reunião foi reagendada para quinta-feira. Solicitamos a gentileza de providenciarem os relatórios.</p>
+                <div class="ia-texto__toast">✓ Texto melhorado automaticamente</div>
+              </div>
+              <p class="ia-anota ia-anota--rosa">↑ opacidade: o que mudou? não dá para saber</p>
+              <p class="ia-anota ia-anota--rosa">sem volta: o seu jeito de escrever sumiu</p>
+            </div>
+
+            <div class="ia-painel ia-painel--claro">
+              <p class="ia-selo ia-selo--solucao">a solução</p>
+              <h3>Sugestões que você escolhe</h3>
+              <p class="ia-painel__sub">O texto continua seu. A IA só aponta o que pode melhorar.</p>
+              <div class="ia-texto">
+                <p class="ia-texto__rotulo">sua mensagem</p>
+                <p class="ia-texto__caixa">Oi pessoal, a reunião mudou <mark data-sug="1">pra</mark> quinta. Tragam <mark data-sug="2">os relatório</mark>.</p>
+              </div>
+              <p class="ia-anota">↑ cada mudança aparece marcada</p>
+              <ul class="ia-sugs">
+                <li data-sug="1" data-de="pra" data-para="para"><div><small>Ortografia</small><span><s>pra</s> → <b>para</b></span></div><button type="button" class="botao ia-sug__sim">Aceitar</button><button type="button" class="botao botao--secundario ia-sug__nao">Ignorar</button></li>
+                <li data-sug="2" data-de="os relatório" data-para="os relatórios"><div><small>Concordância</small><span><s>os relatório</s> → <b>os relatórios</b></span></div><button type="button" class="botao ia-sug__sim">Aceitar</button><button type="button" class="botao botao--secundario ia-sug__nao">Ignorar</button></li>
+              </ul>
+              <p class="ia-anota">↑ você aceita ou ignora, uma por uma</p>
+            </div>
+          </div>
+              </li>
+              </ul>
+            </div>
+            <div class="telas__controles">
+              <button class="telas__seta" type="button" data-telas="anterior" aria-label="Exemplo anterior"><img src="imagens/seta-esquerda.svg" width="20" height="32" alt=""></button>
+              <div class="telas__pontos" role="tablist" aria-label="Escolher exemplo"></div>
+              <button class="telas__seta" type="button" data-telas="proxima" aria-label="Próximo exemplo"><img src="imagens/seta-direita.svg" width="20" height="32" alt=""></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TRÊS DESAFIOS -->
+      <section class="secao">
+        <div class="container">
+          <div class="ia-cabecalho">
+            <div>
+              <p class="anotacao">o que a pesquisa encontrou</p>
+              <h2>Três desafios para a mente</h2>
+              <p>A IA pode ampliar nossas capacidades, mas também traz novos riscos para a experiência.</p>
+            </div>
+          </div>
+          <div class="ia-cards">
+            <div class="ia-card">
+              <img class="ia-icone" src="imagens/icone-emaranhado.svg" width="56" height="56" alt="">
+              <div><h3>Sobrecarga</h3><p>Mais informação do que conseguimos processar.</p></div>
+            </div>
+            <div class="ia-card">
+              <img class="ia-icone" src="imagens/icone-olho.svg" width="56" height="56" alt="">
+              <div><h3>Opacidade</h3><p>Decisões sem explicação geram incerteza.</p></div>
+            </div>
+            <div class="ia-card">
+              <img class="ia-icone" src="imagens/icone-balanca.svg" width="56" height="56" alt="">
+              <div><h3>Confiança mal calibrada</h3><p>Confiar demais, ou de menos, pode levar a escolhas ruins.</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ONDE O DESIGN FAZ A DIFERENÇA -->
+      <section class="secao secao--branca">
+        <div class="container">
+          <div class="ia-cabecalho">
+            <div>
+              <p class="anotacao">e como o design ajuda</p>
+              <h2>Onde o design faz a diferença</h2>
+              <p>As práticas que a pesquisa encontrou na literatura. O design pode:</p>
+            </div>
+          </div>
+          <div class="ia-praticas">
+            <div>
+              <img class="ia-icone" src="imagens/icone-alvo.svg" width="56" height="56" alt="">
+              <div><h3>Mostrar a confiança</h3><p>Indicar o quanto a IA tem certeza de cada sugestão.</p></div>
+            </div>
+            <div>
+              <img class="ia-icone" src="imagens/icone-balao.svg" width="56" height="56" alt="">
+              <div><h3>Revelar aos poucos</h3><p>A informação aparece conforme a pessoa precisa dela.</p></div>
+            </div>
+            <div>
+              <img class="ia-icone" src="imagens/icone-desfazer.svg" width="56" height="56" alt="">
+              <div><h3>Permitir desfazer</h3><p>Dar controle para revisar, ajustar e voltar atrás.</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DA PESQUISA À EXPERIÊNCIA -->
+      <section class="secao">
+        <div class="container">
+          <div class="ia-cabecalho">
+            <div>
+              <p class="anotacao">sobre a pesquisa</p>
+              <h2>Da pesquisa à experiência</h2>
+              <p>Revisão bibliográfica narrativa sobre design, inteligência artificial e ergonomia cognitiva.</p>
+            </div>
+          </div>
+
+          <dl class="estudo__ficha ia-ficha">
+            <div><dt>Autoras</dt><dd>Geise Moreira e Valentina Delanoy</dd></div>
+            <div><dt>Orientação</dt><dd>Prof. Eduardo Cipriani Schwengber</dd></div>
+            <div><dt>Bases</dt><dd>Google Acadêmico, SciELO e periódicos de HCI</dd></div>
+            <div><dt>Autores-base</dt><dd>Sweller (1988) e Hollender et al. (2010)</dd></div>
+          </dl>
+
+          <!-- O resumo completo fica guardado aqui: abre ao clicar -->
+          <details class="resumo-completo">
+            <summary>Ler o resumo completo</summary>
+            <div class="resumo-completo__texto">
+              <h3 class="resumo-completo__titulo">A importância do profissional de design na criação de interfaces com IA que preservem a ergonomia cognitiva do usuário</h3>
+              <p><strong>Introdução:</strong> A ergonomia cognitiva estuda a adequação de sistemas às capacidades de processamento mental do usuário, tendo a carga cognitiva como um de seus conceitos centrais, definida como a demanda de processamento exigida para operar um sistema (Sweller, 1988). A Inteligência Artificial está cada vez mais presente em interfaces, por meio de chatbots, sistemas de recomendação e personalização automática, que nem sempre comunicam com clareza seus critérios de funcionamento. Segundo a literatura revisada, essa falta de transparência pode estar associada a riscos como sobrecarga de informação e confiança mal calibrada, reforçando a importância da curadoria de um profissional de Design. O designer é apontado como responsável por traduzir a capacidade técnica da IA em usabilidade real.</p>
+              <p><strong>Objetivo:</strong> Investigar, por meio de revisão bibliográfica, a importância do designer como mediador entre a capacidade técnica da Inteligência Artificial e uma experiência de uso cognitivamente adequada. Buscou-se levantar os principais riscos cognitivos associados ao uso de IA em interfaces, como sobrecarga, opacidade e confiança mal calibrada; discutir o papel do designer nessa mediação; e identificar práticas de design capazes de mitigar tais riscos.</p>
+              <p><strong>Método:</strong> O desenvolvimento desta pesquisa fundamentou-se em uma revisão bibliográfica de caráter narrativo, realizada em bases como Google Acadêmico, SciELO e periódicos de Interação Humano-Computador (HCI), reunindo estudos sobre a Teoria da Carga Cognitiva e sobre a inserção da Inteligência Artificial no processo de design, com base em Sweller (1988) e Hollender et al. (2010).</p>
+              <p><strong>Resultados:</strong> A pesquisa possibilitou sistematizar os principais riscos cognitivos discutidos na literatura: sobrecarga, opacidade e confiança mal calibrada. Identificaram-se práticas de design associadas à mitigação desses riscos, como a indicação do nível de confiança das sugestões da IA, a divulgação progressiva de informações e a garantia de reversibilidade das ações do sistema. A literatura indica que a atuação do designer contribui para mitigar esses problemas, traduzindo a capacidade técnica da IA em decisões de projeto voltadas às necessidades cognitivas do usuário.</p>
+              <p><strong>Conclusão:</strong> Compreendeu-se como a Inteligência Artificial em interfaces pode ampliar a carga cognitiva do usuário, atendendo ao objetivo geral proposto. Reforçou-se o papel do designer como mediador entre a técnica e a experiência humana, já que a tecnologia por si só não garante boas experiências: é o olhar do designer que a torna acessível e equilibrada. Este trabalho contribuiu para conscientizar empresas de software e o público em geral sobre a importância de integrar profissionais de Design no desenvolvimento de interfaces com IA.</p>
+              <ul class="tags">
+                <li>Inteligência artificial</li>
+                <li>Profissional de design</li>
+                <li>Ergonomia cognitiva</li>
+                <li>Experiência do usuário</li>
+                <li>Usabilidade</li>
+              </ul>
+            </div>
+          </details>
+
+          <div class="acoes estudo__acoes">
+            <a class="botao" href="projetos-faculdade.html">Voltar aos projetos da faculdade</a>
+          </div>
+        </div>
+      </section>
+
+      <script>
+        // Demonstração: "Por que esta sugestão?" abre a explicação; Confirmar e Desfazer funcionam de verdade.
+        (function () {
+          var porque = document.querySelector('.ia-porque button');
+          var texto = document.querySelector('.ia-porque p');
+          porque.addEventListener('click', function () {
+            var aberto = porque.getAttribute('aria-expanded') === 'true';
+            porque.setAttribute('aria-expanded', String(!aberto));
+            texto.hidden = aberto;
+          });
+          var confirmar = document.querySelector('.ia-confirmar');
+          var desfazer = document.querySelector('.ia-desfazer-btn');
+          var aviso = document.querySelector('.ia-aviso');
+          confirmar.addEventListener('click', function () {
+            confirmar.disabled = true; desfazer.disabled = false;
+            confirmar.textContent = '✓ Adicionado ao plano';
+            aviso.textContent = 'Pronto! E se mudar de ideia, é só desfazer.';
+          });
+          desfazer.addEventListener('click', function () {
+            confirmar.disabled = false; desfazer.disabled = true;
+            confirmar.textContent = '✓ Confirmar no meu plano';
+            aviso.textContent = 'Desfeito. Nada mudou no seu plano.';
+          });
+          // Exemplo 2: "Não tenho interesse" com desfazer
+          var nao = document.querySelector('.ia-reco__nao'), avisoReco = document.querySelector('.ia-reco__aviso'), reco = document.querySelector('.ia-reco');
+          nao.addEventListener('click', function () {
+            var desfeito = nao.dataset.feito === '1';
+            nao.dataset.feito = desfeito ? '' : '1';
+            reco.classList.toggle('ia-reco--dispensada', !desfeito);
+            nao.textContent = desfeito ? 'Não tenho interesse' : '↶ Desfazer';
+            avisoReco.textContent = desfeito ? 'Desfeito. A recomendação voltou.' : 'Ok! Vamos mostrar menos filmes assim.';
+          });
+          // Exemplo 3: aceitar ou ignorar cada sugestão (e desfazer)
+          document.querySelectorAll('.ia-sugs li').forEach(function (li) {
+            var marca = document.querySelector('mark[data-sug="' + li.dataset.sug + '"]');
+            var sim = li.querySelector('.ia-sug__sim'), naoS = li.querySelector('.ia-sug__nao');
+            function reset() { marca.textContent = li.dataset.de; marca.className = ''; li.className = ''; sim.textContent = 'Aceitar'; naoS.hidden = false; }
+            sim.addEventListener('click', function () {
+              if (li.className) { reset(); return; }
+              marca.textContent = li.dataset.para; marca.className = 'aceita'; li.className = 'feita'; sim.textContent = '↶ Desfazer'; naoS.hidden = true;
+            });
+            naoS.addEventListener('click', function () {
+              marca.className = 'ignorada'; li.className = 'feita'; sim.textContent = '↶ Desfazer'; naoS.hidden = true;
+            });
+          });
+        })();
+      </script>
+
+    </article>
+
+  </main>
+
+  <!-- ================= CONTATO (rodapé em duas faixas) ================= -->
+  <footer id="contato" class="contato">
+    <div class="container contato__chamada">
+      <p class="anotacao">vamos conversar?</p>
+      <h2>Quer falar sobre um projeto, um estágio ou só tomar um café?</h2>
+      <a class="botao contato__botao" href="https://wa.link/a5lmdj" target="_blank" rel="noopener">Me chama no WhatsApp</a>
+    </div>
+
+    <div class="contato__base">
+      <div class="container contato__colunas">
+        <span class="contato__selo" aria-hidden="true"><img src="imagens/marca-borboleta.svg" width="28" height="28" alt=""></span>
+        <div>
+          <p class="contato__titulo">Fale comigo</p>
+          <ul>
+            <li><a href="https://wa.link/a5lmdj" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><a class="contato__email-curto" href="mailto:geisedossantoscabral@gmail.com?subject=Contato%20pelo%20portf%C3%B3lio">E-mail</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="contato__titulo">Redes</p>
+          <ul>
+            <li><a href="https://www.linkedin.com/in/geisemoreira/" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://www.instagram.com/geisemoreiradesigner/" target="_blank" rel="noopener">Instagram</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="contato__titulo">Onde estou</p>
+          <ul>
+            <li>São Miguel do Oeste · SC</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script>
+        // No computador, o clique abre um e-mail novo no Gmail (numa aba nova), já com o endereço e o assunto.
+        // No celular, continua o mailto, que abre o app de e-mail da pessoa.
+        (function () {
+          var link = document.querySelector('.contato__email-curto');
+          if (!link || /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent)) return;
+          link.href = 'https://mail.google.com/mail/?view=cm&fs=1&to=geisedossantoscabral@gmail.com&su=' + encodeURIComponent('Contato pelo portfólio');
+          link.target = '_blank'; link.rel = 'noopener';
+        })();
+        // A pergunta do rodapé aparece palavra por palavra (subindo e saindo do desfoque) quando chega na tela.
+        // A última palavra, "café?", ganha o rosa neon.
+        (function () {
+          var titulo = document.querySelector('.contato h2');
+          if (!titulo || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+          var palavras = titulo.textContent.trim().split(/\s+/);
+          titulo.setAttribute('aria-label', titulo.textContent.trim());
+          titulo.innerHTML = palavras.map(function (p, i) {
+            var destaque = i === palavras.length - 1 ? ' palavra--destaque' : '';
+            return '<span class="palavra' + destaque + '" aria-hidden="true" style="--i:' + i + '">' + p + '</span>';
+          }).join(' ');
+          titulo.classList.add('titulo-animado');
+          if (!('IntersectionObserver' in window)) { titulo.classList.add('titulo-animado--visivel'); return; }
+          new IntersectionObserver(function (e, olho) {
+            if (e[0].isIntersecting) { titulo.classList.add('titulo-animado--visivel'); olho.disconnect(); }
+          }, { threshold: 0.6 }).observe(titulo);
+        })();
+      </script>
+  </footer>
+
+  <script src="telas-slider.js" defer></script>
+  <script src="borboleta-voo.js" defer></script>
+  <script>
+    // Menu do celular: o botão ☰ abre e fecha a lista de links
+    (function () {
+      var topo = document.querySelector('.topo'), botao = document.querySelector('.menu-botao');
+      if (!botao) return;
+      function fechar() { topo.classList.remove('topo--aberto'); botao.setAttribute('aria-expanded', 'false'); botao.setAttribute('aria-label', 'Abrir menu'); }
+      botao.addEventListener('click', function () {
+        var abrir = !topo.classList.contains('topo--aberto');
+        topo.classList.toggle('topo--aberto', abrir);
+        botao.setAttribute('aria-expanded', String(abrir));
+        botao.setAttribute('aria-label', abrir ? 'Fechar menu' : 'Abrir menu');
+      });
+      topo.querySelectorAll('.menu a').forEach(function (a) { a.addEventListener('click', fechar); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') fechar(); });
+    })();
+  </script>
+</body>
+</html>
