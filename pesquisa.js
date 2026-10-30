@@ -1,6 +1,5 @@
-// Pesquisa do Tá na Lista: confere as respostas e envia para o e-mail da Geise pelo FormSubmit.
-// O envio é o "normal" do formulário (vai até o FormSubmit e volta para cá com ?enviado=1).
-// Antes era por AJAX (fetch), mas o navegador bloqueava por CORS e as respostas não chegavam.
+// Pesquisa do Tá na Lista: confere as respostas e envia para o e-mail da Geise pelo Web3Forms, sem sair da página.
+// (Antes era FormSubmit, mas o servidor dele estava fora do ar e nada chegava.)
 (function () {
   var form = document.getElementById('pesquisa');
   if (!form) return;
@@ -8,46 +7,39 @@
   var botao = form.querySelector('button[type="submit"]');
   var obrigada = document.getElementById('pesquisa-obrigada');
 
-  // voltou do FormSubmit: mostra o "obrigada" no lugar do formulário
-  if (/[?&]enviado=1/.test(location.search)) {
-    form.hidden = true; obrigada.hidden = false;
-    obrigada.scrollIntoView({ block: 'center' });
-    return;
-  }
-
   form.addEventListener('submit', function (e) {
-    if (form._honey && form._honey.value) { e.preventDefault(); return; }   // robô
+    e.preventDefault();
+    if (form._honey && form._honey.value) return;   // robô
     for (var n = 1; n <= 5; n++) {
       if (!form.querySelector('input[name="p' + n + '"]:checked')) {
-        e.preventDefault();
         aviso.textContent = 'Falta responder a pergunta ' + n + '.';
         form.querySelector('input[name="p' + n + '"]').focus();
         return;
       }
     }
     // no e-mail, cada resposta aparece com o texto da pergunta (e não "p1", "p2"...)
+    var dados = new FormData();
+    ['access_key', 'subject', 'from_name'].forEach(function (k) { dados.append(k, form[k].value); });
     form.querySelectorAll('fieldset').forEach(function (f, i) {
-      var marcada = f.querySelector('input:checked');
-      var campo = document.createElement('input');
-      campo.type = 'hidden';
-      campo.name = (i + 1) + '. ' + f.querySelector('legend').textContent.replace(/^\d/, '').trim();
-      campo.value = marcada.value;
-      form.appendChild(campo);
-      f.querySelectorAll('input').forEach(function (r) { r.disabled = true; });   // não manda o "p1" repetido
+      dados.append((i + 1) + '. ' + f.querySelector('legend').textContent.replace(/^\d/, '').trim(), f.querySelector('input:checked').value);
     });
-    var sug = form.sugestao;
-    if (!sug.value.trim()) sug.value = '(sem sugestão)';
-    sug.name = '6. Sugestão';
+    dados.append('6. Sugestão', form.sugestao.value.trim() || '(sem sugestão)');
+
     botao.disabled = true; aviso.textContent = 'Enviando...';
+    // FormData sem cabeçalho de conteúdo: o navegador não faz "pergunta prévia" (preflight)
+    fetch('https://api.web3forms.com/submit', { method: 'POST', headers: { 'Accept': 'application/json' }, body: dados })
+      .then(function (r) { return r.json(); })
+      .then(function (r) {
+        if (!r.success) throw new Error(r.message);
+        form.hidden = true; obrigada.hidden = false;
+        obrigada.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      })
+      .catch(function () {
+        // só mostra o "obrigada" quando o envio deu certo de verdade
+        botao.disabled = false;
+        aviso.textContent = 'Não consegui enviar agora. Tente de novo em instantes.';
+      });
   });
 
   form.addEventListener('change', function () { aviso.textContent = ''; });
-
-  // se a pessoa voltar para a página pelo botão "voltar" do navegador, destrava o formulário
-  window.addEventListener('pageshow', function () {
-    botao.disabled = false; aviso.textContent = '';
-    form.querySelectorAll('fieldset input').forEach(function (r) { r.disabled = false; });
-    form.querySelectorAll('input[type="hidden"][name^="1."],input[type="hidden"][name^="2."],input[type="hidden"][name^="3."],input[type="hidden"][name^="4."],input[type="hidden"][name^="5."]').forEach(function (h) { h.remove(); });
-    if (form.sugestao) { form.sugestao.name = 'sugestao'; if (form.sugestao.value === '(sem sugestão)') form.sugestao.value = ''; }
-  });
 })();

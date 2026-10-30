@@ -72,14 +72,13 @@
       <section class="secao diario-pagina">
         <div class="container">
           <!-- ================= PESQUISA (5 perguntas de marcar + sugestão opcional) =================
-               As respostas chegam no e-mail da Geise pelo FormSubmit (formsubmit.co), por envio normal de formulário (sem AJAX, sem CORS).
-               Na PRIMEIRA resposta, o FormSubmit mostra uma página e manda um e-mail pedindo para confirmar o endereço: é só clicar em "Activate Form". -->
-          <form class="pesquisa" id="pesquisa" novalidate method="POST" action="https://formsubmit.co/geisedossantoscabral@gmail.com">
-            <!-- envio "normal" (sem AJAX): a página vai até o FormSubmit e volta para cá com ?enviado=1 -->
-            <input type="hidden" name="_subject" value="Tá na Lista: nova resposta da pesquisa">
-            <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_next" value="https://geisemoreira.com.br/pesquisa-ta-na-lista.html?enviado=1">
+               As respostas chegam no e-mail da Geise pelo Web3Forms (web3forms.com, conta geisedossantoscabral@gmail.com).
+               O FormSubmit foi abandonado em 30/10/2026: o servidor dele estava fora do ar (erro 521). -->
+          <form class="pesquisa" id="pesquisa" novalidate method="POST" action="https://api.web3forms.com/submit">
+            <!-- envio pelo Web3Forms (chave pública do formulário; as respostas vão para o e-mail da Geise) -->
+            <input type="hidden" name="access_key" value="1dc8bd0a-ea70-416e-a99c-d3d65f27f577">
+            <input type="hidden" name="subject" value="Tá na Lista: nova resposta da pesquisa">
+            <input type="hidden" name="from_name" value="Pesquisa Tá na Lista (geisemoreira.com.br)">
             <p class="anotacao">leva menos de 1 minuto</p>
 
             <fieldset class="pesquisa__pergunta">
