@@ -1309,3 +1309,9 @@ img, svg, .voo { -webkit-user-select: none; user-select: none; -webkit-user-drag
   .estudo__titulo { font-size: clamp(34px, 10vw, 42px); hyphens: none; }
 }
 .sem-quebra { white-space: nowrap; }
+
+/* o atributo hidden sempre esconde (o .pesquisa tem display:grid, que passava por cima e deixava o formulário aparecendo junto com o "obrigada") */
+[hidden] { display: none !important; }
+/* respiro entre os botões do formulário e o card de agradecimento */
+.pesquisa__fim { margin-bottom: 8px; }
+.pesquisa + .pesquisa__obrigada { margin-top: 48px; }

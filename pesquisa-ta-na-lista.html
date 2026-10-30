@@ -6,13 +6,13 @@
   <title>Tá na Lista | Pesquisa | Geise Moreira</title>
   <meta name="description" content="Responda à pesquisa do Tá na Lista e ajude a criar um app que monta a sua lista de compras do mês.">
   <!-- prévia quando o link é compartilhado (WhatsApp, LinkedIn...): endereço do site no Cloudflare.
-       Se o site mudar de endereço (ex.: domínio próprio), troque "https://cadernodedesign.designday.workers.dev" aqui. -->
+       Endereço do site: domínio próprio (geisemoreira.com.br). Se mudar, troque "https://geisemoreira.com.br" aqui. -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:title" content="Tá na Lista | Pesquisa | Geise Moreira">
   <meta property="og:description" content="Responda à pesquisa do Tá na Lista e ajude a criar um app que monta a sua lista de compras do mês.">
-  <meta property="og:image" content="https://cadernodedesign.designday.workers.dev/imagens/compartilhar.jpg">
-  <meta property="og:url" content="https://cadernodedesign.designday.workers.dev/pesquisa-ta-na-lista.html">
+  <meta property="og:image" content="https://geisemoreira.com.br/imagens/compartilhar.jpg">
+  <meta property="og:url" content="https://geisemoreira.com.br/pesquisa-ta-na-lista.html">
   <meta name="twitter:card" content="summary_large_image">
 
   <!-- Fontes (Google Fonts, uso comercial liberado):
@@ -72,9 +72,14 @@
       <section class="secao diario-pagina">
         <div class="container">
           <!-- ================= PESQUISA (5 perguntas de marcar + sugestão opcional) =================
-               As respostas chegam no e-mail da Geise pelo FormSubmit (formsubmit.co).
-               Na PRIMEIRA resposta, o FormSubmit manda um e-mail pedindo para confirmar o endereço: é só clicar em "Activate". -->
-          <form class="pesquisa" id="pesquisa" novalidate data-email="geisedossantoscabral@gmail.com">
+               As respostas chegam no e-mail da Geise pelo FormSubmit (formsubmit.co), por envio normal de formulário (sem AJAX, sem CORS).
+               Na PRIMEIRA resposta, o FormSubmit mostra uma página e manda um e-mail pedindo para confirmar o endereço: é só clicar em "Activate Form". -->
+          <form class="pesquisa" id="pesquisa" novalidate method="POST" action="https://formsubmit.co/geisedossantoscabral@gmail.com">
+            <!-- envio "normal" (sem AJAX): a página vai até o FormSubmit e volta para cá com ?enviado=1 -->
+            <input type="hidden" name="_subject" value="Tá na Lista: nova resposta da pesquisa">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://geisemoreira.com.br/pesquisa-ta-na-lista.html?enviado=1">
             <p class="anotacao">leva menos de 1 minuto</p>
 
             <fieldset class="pesquisa__pergunta">
